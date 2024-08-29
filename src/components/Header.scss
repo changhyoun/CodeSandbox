@@ -1,0 +1,64 @@
+#Header{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > div{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > div:nth-of-type(1){
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            img{
+                height: 100%;
+                width: 23%;
+                object-fit: contain;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                &.fade-out{
+                    transform: scale(0.95);
+                    opacity: 0.7;
+                }
+                &.fade-in{
+                    transform: scale(1.05);
+                    opacity: 1;
+                }
+            }
+        }
+        & > div:nth-of-type(2){
+            width: 15%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            p{
+                font-size: 0.8em;
+                color: #a3a3a3;
+                font-family: 'AppleNeoSB';
+            }
+            button{
+                font-size: 0.8em;
+                color: #ffffff;
+                padding: 8px;
+                border-radius: 5px 10px;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+                background-color: #00b6ff;
+                font-family: "AppleNeoSB";
+                border: none;
+                outline: none;
+                cursor: pointer;
+                
+                
+            }
+        }
+    }
+}
