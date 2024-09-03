@@ -31,5 +31,14 @@ export {rol8}
 import rol9 from "../assets/atlassian.webp"
 export {rol9}
 
+// 섹션2
+import se2_t from "../assets/se2_t.png"
+export {se2_t}
+
+// 섹션3
+import se3_t from "../assets/se3_t.png"
+export {se3_t}
+
+
 
 

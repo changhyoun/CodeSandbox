@@ -1,0 +1,19 @@
+.Se3_box{
+  width: 18.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  .round{
+    width: 60%;
+    height: 110px;
+    background: radial-gradient(circle, 
+    #427D9D 0%,   // 가장 안쪽 (중심) 색상
+    #2C5469 56%,  // 중간 색상
+    #172C37 100%  // 가장 바깥쪽 색상    
+    );
+    border-radius: 50%;
+  }
+}
