@@ -39,6 +39,19 @@ export {se2_t}
 import se3_t from "../assets/se3_t.png"
 export {se3_t}
 
+// 섹션4
+import se4_bt1 from "../assets/se4_bt1.mp4"
+export {se4_bt1}
+import se4_bt1_sum from "../assets/se4_bt1.png"
+export {se4_bt1_sum}
+import se4_bt2 from "../assets/se4_bt2.jpg"
+export {se4_bt2}
+import se4_bt3 from "../assets/se4_bt3.mp4"
+export {se4_bt3}
+import se4_bt3_sum from "../assets/se4_bt3.png"
+export {se4_bt3_sum}
+
+
 
 
 

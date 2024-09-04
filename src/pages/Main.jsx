@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';  // TextPlugin 추가
 import Header from '../components/Header';
-import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t } from '../components/image';
+import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t,se4_bt1,se4_bt2,se4_bt3 } from '../components/image';
 import Se2_box from '../components/Se2_box';
 import Se3_box from '../components/Se3_box';
 
@@ -378,6 +378,68 @@ const Main = () => {
                   arrow_forward_ios
                   </span>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section4">
+          <div className="section4_inner">
+            <div className="section4_t">
+              <span class="material-symbols-rounded">
+                rebase_edit
+              </span>
+              <h2>워크플로를 가속화하세요.</h2>
+              <p>효율적인 코드 리뷰를 위한 올인원 플랫폼으로 리뷰 주기를 단축해보세요.</p>
+            </div>
+            <div className="section4_bt">
+              <div className='Se4_box'>
+                <div className="Se4_box_t">
+                  <div className="Se4_box_t_in">
+                    <span class="material-symbols-rounded">
+                        link
+                      </span>
+                      <h4>모든 PR과 브랜치가 URL입니다.</h4>
+                      <p>2초 만에 시작되는 클라우드 개발 환경을 제공하고,<br/>
+                      모든 코드 리뷰 도구를 하나의 플랫폼에 통합하세요.</p>
+                  </div>
+                   
+                </div>
+                <div className="Se4_box_bt">
+                  <video autoPlay muted src={se4_bt1}></video>
+                </div>
+              </div>
+              <div className='Se4_box'>
+                <div className="Se4_box_t">
+                  <div className="Se4_box_t_in">
+                    <span class="material-symbols-rounded">
+                        history
+                      </span>
+                      <h4>코드를 신속하게 검토하세요.</h4>
+                      <p>매주 PR 리뷰에 드는 시간을 절약하세요.<br/>
+                      코드, 테스트, 미리 보기를 확인하고<br/>
+                      필요한 변경을 한 뒤 바로 병합하세요</p>
+                  </div>
+                   
+                </div>
+                <div className="Se4_box_bt">
+                  <img src={se4_bt2} alt="se4_bt2" />
+                </div>
+              </div>
+              <div className='Se4_box'>
+                <div className="Se4_box_t">
+                  <div className="Se4_box_t_in">
+                    <span class="material-symbols-rounded">
+                        Groups
+                      </span>
+                      <h4>팀 전체에 힘을 실어주세요.</h4>
+                      <p>우리의 인스펙트 도구와 같은 접근 가능한 도구를 사용하여,<br/>
+                      누구나 몇 번의 클릭만으로 커밋 변경을 할 수 있습니다.</p>
+                  </div>
+                   
+                </div>
+                <div className="Se4_box_bt">
+                  <video autoPlay muted src={se4_bt3}></video>
+                </div>
               </div>
             </div>
           </div>
