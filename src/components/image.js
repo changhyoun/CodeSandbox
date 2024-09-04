@@ -9,7 +9,7 @@ import FullLogo_wh from "../assets/FullLogo_wh.svg"
 export {FullLogo_wh}
 
 // 섹션1
-import se1_t_rt from "../assets/se1_t_rt.png"
+import se1_t_rt from "../assets/se1_t_rt.svg"
 export {se1_t_rt}
 
 import rol1 from "../assets/shopify.webp"

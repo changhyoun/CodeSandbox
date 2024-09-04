@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "./Main.scss";
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import { TextPlugin } from 'gsap/TextPlugin';  // TextPlugin 추가
 import Header from '../components/Header';
 import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t } from '../components/image';
 import Se2_box from '../components/Se2_box';
 import Se3_box from '../components/Se3_box';
+
+gsap.registerPlugin(TextPlugin);
 
 const Main = () => {
   const h1Ref1 = useRef(null);
@@ -14,7 +18,12 @@ const Main = () => {
   const imgRef = useRef(null);
   const rolRef = useRef(null);
   const section2Ref = useRef(null);
+  const section3h2Ref = useRef(null); // 섹션 3의 h2 요소를 참조하기 위한 useRef 추가
+  const section3pRef = useRef(null);  // 섹션 3의 p 요소를 참조하기 위한 useRef 추가
+  const section3aRef = useRef(null);
+  const se3BoxRefs = useRef([]); // 모든 Se3_box 컴포넌트를 참조하기 위한 useRef 배열
   const [shouldAnimate, setShouldAnimate] = useState(false); // 애니메이션 트리거 상태 추가
+
 
   useEffect(() => {
     // 기존 애니메이션 설정
@@ -82,18 +91,118 @@ const Main = () => {
       }
     });
 
-    // Intersection Observer 설정
-    const observer = new IntersectionObserver(
+     // h2를 특수 문자로 초기화
+     const originalText = "전체 팀을 위한 하나의 환경,";
+     const scrambledText = originalText.split('').map(() => 
+       String.fromCharCode(Math.floor(Math.random() * (126 - 33) + 33))
+     ).join('');
+     section3h2Ref.current.innerText = scrambledText; // 특수 문자로 초기화
+ 
+     // Intersection Observer 설정
+     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setShouldAnimate(true); // 스크롤 위치에 따라 애니메이션 트리거 설정
-          observer.disconnect(); // 한 번 실행 후 감지 중지
+          setShouldAnimate(true);
+          observer.disconnect(); // 애니메이션을 한 번만 실행하도록 옵저버 연결 해제
+    
+          // GSAP 애니메이션 설정
+          const h2Animation = gsap.timeline();
+          h2Animation.to(section3h2Ref.current, {
+            duration: 2,
+            text: originalText, // 원래 텍스트로 변경
+            ease: 'none',
+            onComplete: () => {
+              // 애니메이션이 끝난 후 p 요소 나타나기
+              gsap.to(section3pRef.current, {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out',
+                onComplete: () => {
+                  // p 요소가 나타난 후 각 Se3_box가 아래에서 위로 나타나기
+                  se3BoxRefs.current.forEach((ref, index) => {
+                    gsap.fromTo(
+                      ref,
+                      {
+                        y: 50, // 아래에서 시작
+                        opacity: 0,
+                      },
+                      {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: 'power2.out',
+                        delay: index * 0.3, // 순차적으로 나타나도록 지연 시간 설정
+                        onComplete: () => {
+                          // 마지막 요소 애니메이션이 끝난 후 a 요소 애니메이션 실행
+                          if (index === se3BoxRefs.current.length - 1) {
+                            gsap.to(section3aRef.current, {
+                              opacity: 1,
+                              duration: 0.5,
+                              ease: 'power2.out',
+                            });
+                          }
+                        },
+                      }
+                    );
+                  });
+                },
+              });
+            },
+          });
         }
       },
-      { threshold: 0.67 } // 스크롤이 2/3 지점에 도달했을 때 실행
+      { threshold: 0.9 } // 스크롤이 4/5 지점에 도달했을 때 실행
     );
-
-    if (section2Ref.current) observer.observe(section2Ref.current);
+ 
+     // 새로고침 후에도 현재 스크롤 위치를 확인하여 애니메이션이 시작되도록 설정
+     if (window.scrollY > section2Ref.current.offsetTop + section2Ref.current.offsetHeight * 0.8) {
+       setShouldAnimate(true);
+ 
+      // GSAP 애니메이션 즉시 실행
+    gsap.to(section3h2Ref.current, {
+      duration: 1,
+      text: originalText, // 원래 텍스트로 변경
+      ease: 'none',
+      onComplete: () => {
+        gsap.to(section3pRef.current, {
+          opacity: 1,
+          duration: 1,
+          ease: 'power2.out',
+          onComplete: () => {
+            // p 요소가 나타난 후 각 Se3_box가 아래에서 위로 나타나기
+            se3BoxRefs.current.forEach((ref, index) => {
+              gsap.fromTo(
+                ref,
+                {
+                  y: 50, // 아래에서 시작
+                  opacity: 0,
+                },
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 1,
+                  ease: 'power2.out',
+                  delay: index * 0.3, // 순차적으로 나타나도록 지연 시간 설정
+                  onComplete: () => {
+                    // 마지막 요소 애니메이션이 끝난 후 a 요소 애니메이션 실행
+                    if (index === se3BoxRefs.current.length - 1) {
+                      gsap.to(section3aRef.current, {
+                        opacity: 1,
+                        duration: 0.5,
+                        ease: 'power2.out',
+                      });
+                    }
+                  },
+                }
+              );
+            });
+          },
+        });
+      },
+    });
+    } else {
+      if (section2Ref.current) observer.observe(section2Ref.current);
+    }
 
     return () => observer.disconnect();
   }, []);
@@ -203,18 +312,72 @@ const Main = () => {
           <div className="section3_inner">
             <div className="section3_t">
               <img src={se3_t} alt="se3_t" />
-              <h2>전체 팀을 위한 하나의 환경,</h2>
-              <p>생산성을 높이고 협업을 강화할 수 있는<br/>
+              <h2 ref={section3h2Ref}>전체 팀을 위한 하나의 환경,</h2>
+              <p ref={section3pRef} style={{ opacity: 0 }}>생산성을 높이고 협업을 강화할 수 있는<br/>
               일관된 개발 환경을 마련하세요.</p>
             </div>
             <div className="section3_bt">
-              <div className="section3_bt_t">
-                <Se3_box se3_span_tx={'cloud'} se3_h3_tx={'안녕'} se3_p_tx={'안녕하세요'}/>
-                <Se3_box se3_span_tx={'cloud'} se3_h3_tx={'안녕'} se3_p_tx={'안녕하세요'}/>
-                <Se3_box se3_span_tx={'cloud'} se3_h3_tx={'안녕'} se3_p_tx={'안녕하세요'}/>
+            <div className="section3_bt_t">
+                {/* Se3_box 컴포넌트들을 각각의 ref에 추가 */}
+                <Se3_box 
+                  ref={el => se3BoxRefs.current[0] = el}
+                  se3_span_tx={'Cloud'} 
+                  se3_h3_tx={'로컬보다 빠른,'} 
+                  se3_p_tx={
+                    <>
+                      느린 빌드 시간과 컨텍스트 전환으로 인한<br/>
+                      시간 낭비를 없애세요.<br />
+                      우리의 강력한 VM은 로컬 환경보다<br />
+                      최대 200배 빠르게 코드를 실행하며,<br />
+                      모든 프로젝트를 2초 이내에 재개합니다.
+                    </>
+                  }
+                />
+                <Se3_box 
+                  ref={el => se3BoxRefs.current[1] = el}
+                  se3_span_tx={'Check'} 
+                  se3_h3_tx={'모든 사람의 컴퓨터에서 작동,'} 
+                  se3_p_tx={
+                    <>
+                      모든 개발자가 동일한 경험을 할 수 있도록<br />
+                      각 지점을 클라우드가 아닌<br />
+                      중앙 집중식 CDE에서 실행합니다.
+                    </>
+                  }
+                />
+                <Se3_box 
+                  ref={el => se3BoxRefs.current[2] = el}
+                  se3_span_tx={'group'} 
+                  se3_h3_tx={'언제나 24시간 협업 가능,'} 
+                  se3_p_tx={
+                    <>
+                      CodeSandbox는 팀 전체가 언제든지 동일한 환경에서<br />
+                      실시간으로 코드 작업을 할 수 있는<br />
+                      유일한 완전 협업 CDE입니다.
+                    </>
+                  }
+                />
+                <Se3_box 
+                  ref={el => se3BoxRefs.current[3] = el}
+                  se3_span_tx={'shield_locked'} 
+                  se3_h3_tx={'신뢰성과 보안성,'} 
+                  se3_p_tx={
+                    <>
+                      우리는 SOC 2 Type II를 준수하여<br />
+                      코드와 데이터의 보안을 보장합니다.<br />
+                      이를 통해 유연한 권한 설정, 접근 제어,<br />
+                      보안 모니터링, 비공개 npm 등의 기능을 제공합니다.
+                    </>
+                  }
+                />
               </div>
               <div className="section3_bt_bt">
-                
+                <Link ref={section3aRef} style={{ opacity: 0 }}  >
+                  Start for free
+                  <span className="material-symbols-rounded">
+                  arrow_forward_ios
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

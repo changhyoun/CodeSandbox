@@ -1,5 +1,7 @@
 $main-color: #80AF81;
 $main2-color: #6E996F;
+$main3-color: #89bc8b;
+
 $text-color1 : #1D1D1D;
 
 
@@ -136,7 +138,7 @@ $text-color1 : #1D1D1D;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, $main2-color, #496C4A);
+    background-color: $main3-color;
     & > div{
       width: 70%;
       height: 80%;
@@ -153,6 +155,7 @@ $text-color1 : #1D1D1D;
         align-items: center;
         img{
           height: 60%;
+          filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.25));
         }
         h1{
           color: $text-color1;
@@ -182,18 +185,19 @@ $text-color1 : #1D1D1D;
           width: 20%;
           height: 50%;
           border-radius: 15px;
-          color: $main-color;
+          color: $main3-color;
           background-color: $text-color1;
           border: none;
           outline: none;
           display: flex;
           align-items: center;
-          justify-content: space-evenly;
+          justify-content: center;
           font-family: 'AppleNeoEB';
-          
+          cursor: pointer;
           span{
             font-size: 1em;
             margin-bottom: 1%;
+            margin-left: 2%;
           }
         }
       }
@@ -214,7 +218,6 @@ $text-color1 : #1D1D1D;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      border: 1px solid red;
       & > div{
         width: 100%;
         height: 50%;
@@ -242,8 +245,30 @@ $text-color1 : #1D1D1D;
           & > div:nth-of-type(1){
             width: 100%;
             height: 80%;
-            border: 1px solid red;
             display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+          }
+          & > div:nth-of-type(2){
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $main-color;
+              font-family: 'AppleNeoSB';
+              white-space: nowrap;
+              span{
+                font-size: 1em;
+                margin-bottom: 1%;
+                margin-left: 2%;
+
+              }
+            }
           }
         }
       }
