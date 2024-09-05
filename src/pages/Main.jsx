@@ -2,11 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import "./Main.scss";
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
-import { TextPlugin } from 'gsap/TextPlugin';  // TextPlugin 추가
+import { TextPlugin } from 'gsap/TextPlugin';
 import Header from '../components/Header';
-import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t,se4_bt1,se4_bt2,se4_bt3 } from '../components/image';
+import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t, se4_bt1, se4_bt2, se4_bt3 } from '../components/image';
 import Se2_box from '../components/Se2_box';
 import Se3_box from '../components/Se3_box';
+import Se6_box from '../components/Se6_box';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -18,31 +19,34 @@ const Main = () => {
   const imgRef = useRef(null);
   const rolRef = useRef(null);
   const section2Ref = useRef(null);
-  const section3h2Ref = useRef(null); // 섹션 3의 h2 요소를 참조하기 위한 useRef 추가
-  const section3pRef = useRef(null);  // 섹션 3의 p 요소를 참조하기 위한 useRef 추가
+  const section3h2Ref = useRef(null);
+  const section3pRef = useRef(null);
   const section3aRef = useRef(null);
-  const se3BoxRefs = useRef([]); // 모든 Se3_box 컴포넌트를 참조하기 위한 useRef 배열
-  const [shouldAnimate, setShouldAnimate] = useState(false); // 애니메이션 트리거 상태 추가
-
+  const se3BoxRefs = useRef([]);
+  const section4Ref = useRef(null);
+  const se4BoxRefs = useRef([]);
+  const [isFixed, setIsFixed] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const section4TopRef = useRef(0);
 
   useEffect(() => {
     // 기존 애니메이션 설정
-    const h1Chars1 = h1Ref1.current.innerText.split("").map((char1, i) => 
+    const h1Chars1 = h1Ref1.current.innerText.split("").map((char1) =>
       `<span class="char1">${char1}</span>`
     ).join("");
     h1Ref1.current.innerHTML = h1Chars1;
 
-    const h2Chars1 = h2Ref1.current.innerText.split("").map((char1, i) => 
+    const h2Chars1 = h2Ref1.current.innerText.split("").map((char1) =>
       `<span class="char1">${char1}</span>`
     ).join("");
     h2Ref1.current.innerHTML = h2Chars1;
 
-    const pText1 = "CodeSandbox는 2초 만에 재개되는 연중무휴".split("").map((char2, i) => 
+    const pText1 = "CodeSandbox는 2초 만에 재개되는 연중무휴".split("").map((char2) =>
       char2 === " " ? `<span class="char2">&nbsp;</span>` : `<span class="char2">${char2}</span>`
     ).join("");
     pRef1.current.innerHTML = pText1;
 
-    const pText2 = "협업 클라우드 개발 환경(CDE)을 제공합니다.".split("").map((char2, i) => 
+    const pText2 = "협업 클라우드 개발 환경(CDE)을 제공합니다.".split("").map((char2) =>
       char2 === " " ? `<span class="char2">&nbsp;</span>` : `<span class="char2">${char2}</span>`
     ).join("");
     pRef2.current.innerHTML = pText2;
@@ -91,49 +95,43 @@ const Main = () => {
       }
     });
 
-     // h2를 특수 문자로 초기화
-     const originalText = "전체 팀을 위한 하나의 환경,";
-     const scrambledText = originalText.split('').map(() => 
-       String.fromCharCode(Math.floor(Math.random() * (126 - 33) + 33))
-     ).join('');
-     section3h2Ref.current.innerText = scrambledText; // 특수 문자로 초기화
- 
-     // Intersection Observer 설정
-     const observer = new IntersectionObserver(
+    // h2를 특수 문자로 초기화
+    const originalText = "전체 팀을 위한 하나의 환경,";
+    const scrambledText = originalText.split('').map(() =>
+      String.fromCharCode(Math.floor(Math.random() * (126 - 33) + 33))
+    ).join('');
+    section3h2Ref.current.innerText = scrambledText;
+
+    // Intersection Observer 설정
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setShouldAnimate(true);
-          observer.disconnect(); // 애니메이션을 한 번만 실행하도록 옵저버 연결 해제
-    
+          observer.disconnect();
+
           // GSAP 애니메이션 설정
           const h2Animation = gsap.timeline();
           h2Animation.to(section3h2Ref.current, {
             duration: 2,
-            text: originalText, // 원래 텍스트로 변경
+            text: originalText,
             ease: 'none',
             onComplete: () => {
-              // 애니메이션이 끝난 후 p 요소 나타나기
               gsap.to(section3pRef.current, {
                 opacity: 1,
                 duration: 1,
                 ease: 'power2.out',
                 onComplete: () => {
-                  // p 요소가 나타난 후 각 Se3_box가 아래에서 위로 나타나기
                   se3BoxRefs.current.forEach((ref, index) => {
                     gsap.fromTo(
                       ref,
-                      {
-                        y: 50, // 아래에서 시작
-                        opacity: 0,
-                      },
+                      { y: 50, opacity: 0 },
                       {
                         y: 0,
                         opacity: 1,
                         duration: 1,
                         ease: 'power2.out',
-                        delay: index * 0.3, // 순차적으로 나타나도록 지연 시간 설정
+                        delay: index * 0.3,
                         onComplete: () => {
-                          // 마지막 요소 애니메이션이 끝난 후 a 요소 애니메이션 실행
                           if (index === se3BoxRefs.current.length - 1) {
                             gsap.to(section3aRef.current, {
                               opacity: 1,
@@ -151,60 +149,100 @@ const Main = () => {
           });
         }
       },
-      { threshold: 0.9 } // 스크롤이 4/5 지점에 도달했을 때 실행
+      { threshold: 0.9 }
     );
- 
-     // 새로고침 후에도 현재 스크롤 위치를 확인하여 애니메이션이 시작되도록 설정
-     if (window.scrollY > section2Ref.current.offsetTop + section2Ref.current.offsetHeight * 0.8) {
-       setShouldAnimate(true);
- 
-      // GSAP 애니메이션 즉시 실행
-    gsap.to(section3h2Ref.current, {
-      duration: 1,
-      text: originalText, // 원래 텍스트로 변경
-      ease: 'none',
-      onComplete: () => {
-        gsap.to(section3pRef.current, {
-          opacity: 1,
-          duration: 1,
-          ease: 'power2.out',
-          onComplete: () => {
-            // p 요소가 나타난 후 각 Se3_box가 아래에서 위로 나타나기
-            se3BoxRefs.current.forEach((ref, index) => {
-              gsap.fromTo(
-                ref,
-                {
-                  y: 50, // 아래에서 시작
-                  opacity: 0,
-                },
-                {
-                  y: 0,
-                  opacity: 1,
-                  duration: 1,
-                  ease: 'power2.out',
-                  delay: index * 0.3, // 순차적으로 나타나도록 지연 시간 설정
-                  onComplete: () => {
-                    // 마지막 요소 애니메이션이 끝난 후 a 요소 애니메이션 실행
-                    if (index === se3BoxRefs.current.length - 1) {
-                      gsap.to(section3aRef.current, {
-                        opacity: 1,
-                        duration: 0.5,
-                        ease: 'power2.out',
-                      });
-                    }
-                  },
-                }
-              );
-            });
-          },
-        });
-      },
-    });
+
+    if (window.scrollY > section2Ref.current.offsetTop + section2Ref.current.offsetHeight * 0.8) {
+      setShouldAnimate(true);
+
+      gsap.to(section3h2Ref.current, {
+        duration: 1,
+        text: originalText,
+        ease: 'none',
+        onComplete: () => {
+          gsap.to(section3pRef.current, {
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.out',
+            onComplete: () => {
+              se3BoxRefs.current.forEach((ref, index) => {
+                gsap.fromTo(
+                  ref,
+                  { y: 50, opacity: 0 },
+                  {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power2.out',
+                    delay: index * 0.3,
+                    onComplete: () => {
+                      if (index === se3BoxRefs.current.length - 1) {
+                        gsap.to(section3aRef.current, {
+                          opacity: 1,
+                          duration: 0.5,
+                          ease: 'power2.out',
+                        });
+                      }
+                    },
+                  }
+                );
+              });
+            },
+          });
+        },
+      });
     } else {
       if (section2Ref.current) observer.observe(section2Ref.current);
     }
 
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      const section4Top = section4Ref.current.offsetTop; // 섹션4의 시작 위치
+      const section4Height = section4Ref.current.offsetHeight; // 섹션4의 높이
+      const section5Top = document.getElementById('section5').offsetTop; // 섹션5의 시작 위치
+      const section5Height = document.getElementById('section5').offsetHeight; // 섹션5의 높이
+      const scrollY = window.scrollY; // 현재 스크롤 위치
+      const section3Bottom = document.getElementById('section3').offsetTop + document.getElementById('section3').offsetHeight; // 섹션3의 끝 위치
+        
+      // 섹션4를 고정시키는 로직
+      if (scrollY >= section3Bottom && scrollY < section5Top) {
+        section4Ref.current.style.position = 'fixed';
+        section4Ref.current.style.top = '0';
+      } else {
+        section4Ref.current.style.position = 'relative';
+      }
+    
+      // 섹션 5의 시작 위치부터 높이까지의 스크롤 기준으로 애니메이션 설정
+      const relativeScroll = scrollY - section3Bottom; // section4의 중간부터 스크롤 위치를 계산
+      const relativeProgress = relativeScroll / section4Height; // 스크롤 진행 비율 (0 ~ 1)
+    
+      // 애니메이션 초기화
+      gsap.killTweensOf([se4BoxRefs.current[0], se4BoxRefs.current[1], se4BoxRefs.current[2]]);
+    
+      // 애니메이션 상태에 대한 조건 설정
+      if (relativeProgress >= 0.6) {
+        // 마지막 구간 (80% ~ 100%)
+        gsap.to(se4BoxRefs.current[0], { opacity: 0.1, left: '30%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[1], { opacity: 0.1, left: '15%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[2], { opacity: 1, left: '0%', duration: 0.5, ease: 'power2.out' });
+      
+      } else if (relativeProgress >= 0.2) {
+        // 시작 구간 (20% ~ 50%)
+        gsap.to(se4BoxRefs.current[0], { opacity: 0.1, left: '15%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[1], { opacity: 1, left: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[2], { opacity: 0, left: '0%', duration: 0.5, ease: 'power2.out' });
+      } else {
+        // 초기 상태 (0% ~ 20%)
+        gsap.to(se4BoxRefs.current[0], { opacity: 1, left: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[1], { opacity: 0, left: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[2], { opacity: 0, left: '0%', duration: 0.5, ease: 'power2.out' });
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
@@ -383,7 +421,7 @@ const Main = () => {
           </div>
         </div>
         <div id="section4">
-          <div className="section4_inner">
+          <div className="section4_inner"  ref={section4Ref} >
             <div className="section4_t">
               <span class="material-symbols-rounded">
                 rebase_edit
@@ -392,7 +430,7 @@ const Main = () => {
               <p>효율적인 코드 리뷰를 위한 올인원 플랫폼으로 리뷰 주기를 단축해보세요.</p>
             </div>
             <div className="section4_bt">
-              <div className='Se4_box'>
+              <div className="Se4_box" ref={el => se4BoxRefs.current[0] = el}>
                 <div className="Se4_box_t">
                   <div className="Se4_box_t_in">
                     <span class="material-symbols-rounded">
@@ -408,7 +446,7 @@ const Main = () => {
                   <video autoPlay muted src={se4_bt1}></video>
                 </div>
               </div>
-              <div className='Se4_box'>
+              <div className="Se4_box" ref={el => se4BoxRefs.current[1] = el}>
                 <div className="Se4_box_t">
                   <div className="Se4_box_t_in">
                     <span class="material-symbols-rounded">
@@ -425,7 +463,7 @@ const Main = () => {
                   <img src={se4_bt2} alt="se4_bt2" />
                 </div>
               </div>
-              <div className='Se4_box'>
+              <div className="Se4_box" ref={el => se4BoxRefs.current[2] = el}>
                 <div className="Se4_box_t">
                   <div className="Se4_box_t_in">
                     <span class="material-symbols-rounded">
@@ -441,8 +479,29 @@ const Main = () => {
                   <video autoPlay muted src={se4_bt3}></video>
                 </div>
               </div>
+              
             </div>
           </div>
+        </div>
+        {/* 여백용 */}
+        <div id="section5">
+
+        </div>
+        <div id="section6">
+            <div className="section6_inner">
+              <div className="section6_t">
+                <p>연결 후 바로 사용해보세요</p>
+                <h2>귀하의 개발 환경에 자연스럽게 통합되어,<br/>
+                추가 설정이나 복잡한 구성 없이 바로 사용할 수 있습니다.</h2>
+                <span>클라우드 개발의 모든 혜택을 귀하의 현재 환경과 완벽하게 조화를 이루며 누릴 수 있습니다.<br/>
+                추가적인 설정 없이도 안정적으로 작동하며, 기존 개발 환경에 맞춰 최적화된 성능을 제공합니다.</span>
+              </div>
+              <div className="section6_bt">
+                <Se6_box se6_span_tx={'devices'} se6_h3_tx={<>원하는 에디터를 자유롭게 사용하세요.'} se6_a_tx={'VS Code Extension'} se6_p_tx={<>VS Code와 우리의 웹 에디터를 자유롭게 전환하며<br/>코드 작성과 협업을 끊김 없이 이어가세요.</>} />
+                <Se6_box se6_span_tx={'devices'} se6_h3_tx={'GitHub 통합 기능'} se6_a_tx={'저희 GitHub 앱을 설치하세요.'} se6_p_tx={'PR(풀 리퀘스트)를 신속하게 검토하고 자동 배포 미리보기를 받아보세요.'} />
+                <Se6_box se6_h3_tx={'사전 구성된 환경'} se6_a_tx={'더 알아보기'} se6_p_tx={'우리는 Dev 컨테이너를 사용하여 필요한 도구, 라이브러리, 종속성 등이 모두 사전 구성된 환경을 제공합니다. 이를 통해 번거로운 설정 과정 없이 바로 코딩을 시작할 수 있습니다.'} />
+              </div>
+            </div>
         </div>
     </div>
   )
