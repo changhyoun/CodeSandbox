@@ -1,0 +1,90 @@
+.Se7_box{
+  width: 100%;
+  height: 100%;
+  background-color: #1D1D1D;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  &:hover{
+    background: rgb(37, 37, 37);
+  }
+  & > div{
+    width: 85%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    & > div:nth-of-type(1){
+      width: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      & > div{
+        height: 50%;
+        width: 100%;
+        &:nth-of-type(1) img{
+          width: 30px;
+          height: 30px;
+        }
+        &:nth-of-type(2) h5{
+          font-family: 'AppleNeoEB';
+          font-weight: 100;
+          font-size: 1em;
+          color: white;
+          // margin: 2% 0;
+          margin-bottom: 1%;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        }
+        &:nth-of-type(2) p{
+          color : #A3A3A3;
+          font-family: 'AppleNeoUL';
+          font-size: 0.7em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+    & > div:nth-of-type(2){
+      width: 25%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      & > div{
+        height: 50%;
+        width: 100%;
+        &:nth-of-type(1){
+          display: flex;
+          justify-content: end;
+        }
+        &:nth-of-type(1) span{
+          font-size: 1.2em;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+          color : #A3A3A3;
+        }
+        &:nth-of-type(2){
+          display: flex;
+          align-items: end;
+          justify-content: end;
+          span{
+            font-size: 1em;
+            margin-right: 2%;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+            color : #A3A3A3;
+          }
+          small{
+            color : #A3A3A3;
+            font-family: 'AppleNeoM';
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+          }
+        }
+        
+      }
+      
+      
+    }
+  }
+}

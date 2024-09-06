@@ -51,6 +51,41 @@ export {se4_bt3}
 import se4_bt3_sum from "../assets/se4_bt3.png"
 export {se4_bt3_sum}
 
+// 섹션6
+import se6_github_ic from "../assets/se6_github_ic.png"
+export {se6_github_ic}
+
+// 섹션7
+export { 
+    default as se7_ic1 
+  } from "../assets/se7_ic1.png";
+  export { 
+    default as se7_ic2 
+  } from "../assets/se7_ic2.png";
+  export { 
+    default as se7_ic3 
+  } from "../assets/se7_ic3.png";
+  export { 
+    default as se7_ic4 
+  } from "../assets/se7_ic4.png";
+  export { 
+    default as se7_ic5 
+  } from "../assets/se7_ic5.png";
+  export { 
+    default as se7_ic6 
+  } from "../assets/se7_ic6.png";
+  export { 
+    default as se7_ic8 
+  } from "../assets/se7_ic8.png";
+  export { 
+    default as se7_ic9 
+  } from "../assets/se7_ic9.png";
+// 섹션8
+  export { 
+    default as se8_person1 
+  } from "../assets/se8_person1.png";
+
+
 
 
 

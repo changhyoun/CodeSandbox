@@ -418,11 +418,10 @@ $text-color1 : #1D1D1D;
       flex-direction: column;
       & > div:nth-of-type(1){
         width: 100%;
-        height: 65%;
+        height: 60%;
         p{
-          font-family: 'AppleNeoSB';
-          font-size: 1.2em;
-          color: white;
+          color: #cfcfcf;
+          font-family: "AppleNeoUL";
         }
         h2{
           font-family: 'AppleNeoEB';
@@ -441,6 +440,122 @@ $text-color1 : #1D1D1D;
         height: 35%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+  #section7{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > div{
+      width: 60%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      & > div:nth-of-type(1){
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        p{
+          color: #cfcfcf;
+          font-family: "AppleNeoUL";
+          text-align: right;
+        }
+        h2{
+          font-family: 'AppleNeoEB';
+          font-weight: 100;
+          font-size: 2.5em;
+          color: white;
+          margin: 2% 0;
+          text-align: right
+        }
+      }
+      & > div:nth-of-type(2){
+        width: 100%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        & > div:nth-of-type(1){
+          width: 100%;
+          height: 85%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          row-gap: 3.3%;
+          a{
+            width: 30%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        & > div:nth-of-type(2){
+          width: 100%;
+          height: 15%;
+          display: flex;
+          align-items: end;
+          justify-content: center;
+          
+          a{
+            padding: 1.2%;
+            background-color: $main-color;
+            border-radius: 5px;
+            font-family: "AppleNeoM";
+            transition: all 0.2s ease;
+            font-size: 0.9em;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10);
+            &:hover{
+              background-color: $main3-color;
+            }
+          }
+         
+        }
+      }
+    }
+  }
+  #section8{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > div{
+      width: 60%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      & > div:nth-of-type(1){
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & > div{
+          width: 100%;
+          height: 45%;
+          border: 1px solid;
+          display: flex;
+          white-space: nowrap;
+          column-gap: 2%;
+          overflow-x: hidden;
+        }
+      }
+      & > div:nth-of-type(2){
+        width: 100%;
+        height: 20%;
+        display: flex;
         justify-content: space-between;
       }
     }

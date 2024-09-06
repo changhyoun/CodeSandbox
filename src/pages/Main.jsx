@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import Header from '../components/Header';
-import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t, se4_bt1, se4_bt2, se4_bt3 } from '../components/image';
+import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t, se4_bt1, se4_bt2, se4_bt3,se6_github_ic,se7_ic1,se7_ic2,se7_ic3,se7_ic4,se7_ic5,se7_ic6,se7_ic8,se7_ic9,se8_person1 } from '../components/image';
 import Se2_box from '../components/Se2_box';
 import Se3_box from '../components/Se3_box';
 import Se6_box from '../components/Se6_box';
+import Se7_box from '../components/Se7_box';
+import Se8_box from '../components/Se8_box';
+import Se8_count from '../components/Se8_count';
+
 
 gsap.registerPlugin(TextPlugin);
 
@@ -497,11 +501,92 @@ const Main = () => {
                 추가적인 설정 없이도 안정적으로 작동하며, 기존 개발 환경에 맞춰 최적화된 성능을 제공합니다.</span>
               </div>
               <div className="section6_bt">
-                <Se6_box se6_span_tx={'devices'} se6_h3_tx={<>원하는 에디터를 자유롭게 사용하세요.'} se6_a_tx={'VS Code Extension'} se6_p_tx={<>VS Code와 우리의 웹 에디터를 자유롭게 전환하며<br/>코드 작성과 협업을 끊김 없이 이어가세요.</>} />
-                <Se6_box se6_span_tx={'devices'} se6_h3_tx={'GitHub 통합 기능'} se6_a_tx={'저희 GitHub 앱을 설치하세요.'} se6_p_tx={'PR(풀 리퀘스트)를 신속하게 검토하고 자동 배포 미리보기를 받아보세요.'} />
-                <Se6_box se6_h3_tx={'사전 구성된 환경'} se6_a_tx={'더 알아보기'} se6_p_tx={'우리는 Dev 컨테이너를 사용하여 필요한 도구, 라이브러리, 종속성 등이 모두 사전 구성된 환경을 제공합니다. 이를 통해 번거로운 설정 과정 없이 바로 코딩을 시작할 수 있습니다.'} />
+                <Se6_box se6_span_tx={'devices'} se6_h3_tx={<>원하는 에디터를 자유롭게 사용하세요.</>} se6_a_tx={'VS Code 확장 프로그램'} se6_p_tx={<>VS Code와 우리의 웹 에디터를 자유롭게 전환하며<br/>코드 작성과 협업을 끊김 없이 이어가세요.</>} />
+                <Se6_box se6_h3_tx={'GitHub 통합 기능'} se6_a_tx={'저희 GitHub 앱을 설치하세요.'} se6_p_tx={<>PR(풀 리퀘스트)를 신속하게 검토하고<br/>자동 배포 미리보기를 받아보세요.</>} >
+                  <img src={se6_github_ic} alt="se6_github_ic" />
+                </Se6_box>
+                <Se6_box se6_h3_tx={'사전 구성된 환경'} se6_a_tx={'더 알아보기'} se6_p_tx={<>우리는 Dev 컨테이너를 사용하여 필요한 도구,<br/>라이브러리, 종속성 등이 모두<br/>사전 구성된 환경을 제공합니다.<br/>이를 통해 번거로운 설정 과정 없이<br/>바로 코딩을 시작할 수 있습니다</>} />
               </div>
             </div>
+        </div>
+        <div id="section7">
+          <div className="section7_inner">
+            <div className="section7_t">
+                <p>템플릿의 세계,</p>
+                <h2>당신이 선호하는<br/>
+                스택으로 시작하세요.</h2>
+            </div>
+            <div className="section7_bt">
+              <div className="section7_bt_t">
+                <Link>
+                  <Se7_box se7_ic={se7_ic1} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'1.7k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic2} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'267.7k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic3} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'63.1k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic4} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'18.8k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic5} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'15.8k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic6} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'79.9k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic6} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'1.1k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic8} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'85.5k'}/>
+                </Link>
+                <Link>
+                  <Se7_box se7_ic={se7_ic9} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'0'}/>
+                </Link>
+              </div>
+              <div className="section7_bt_bt">
+                <Link>
+                  Explore templates
+                </Link>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+        <div id="section8">
+          <div className="section8_inner">
+            <div className="section8_t">
+              <div className="section8_t_t">
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              </div>
+              <div className="section8_t_bt">
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              </div>
+            </div>
+            <div className="section8_bt">
+              <Se8_count Se8_count_h3={'400만 +'} Se8_count_p={'유저들'}/>
+              <Se8_count Se8_count_h3={'10,000+'} Se8_count_p={'연결된 저장소'}/>
+              <Se8_count Se8_count_h3={'20,000+'} Se8_count_p={'단체'}/>
+              <Se8_count Se8_count_h3={'100만 +'} Se8_count_p={'작성한 코드 라인'}/>
+            </div>
+          </div>
         </div>
     </div>
   )
