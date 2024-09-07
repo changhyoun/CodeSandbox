@@ -27,7 +27,7 @@ const Se8_count = ({ Se8_count_h3, Se8_count_p }) => {
       },
       scrollTrigger: {
         trigger: '#section8', // 섹션 7의 3/4 지점을 트리거로 설정
-        start: "top 75%", // 섹션 7의 상단에서부터 75% 위치
+        start: "top 75%",
         toggleActions: "play none none none"
       }
     });

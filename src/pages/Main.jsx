@@ -12,6 +12,7 @@ import Se7_box from '../components/Se7_box';
 import Se8_box from '../components/Se8_box';
 import Se8_count from '../components/Se8_count';
 import Footer from '../components/Footer';
+import "../components/Responsive.scss"
 
 
 gsap.registerPlugin(TextPlugin);
@@ -63,27 +64,27 @@ const Main = () => {
     tl.to(h1Ref1.current.querySelectorAll('.char1'), {
       color: '#80AF81',
       '-webkit-text-stroke': '0px',
-      duration: 1,
+      duration: 0.7,
       ease: 'power1.out',
       stagger: 0.02,
     })
     .to(h2Ref1.current.querySelectorAll('.char1'), {
       color: '#D6EFD8',
       '-webkit-text-stroke': '0px',
-      duration: 1,
+      duration: 0.7,
       ease: 'power2.out',
       stagger: 0.02,
     })
     .to(allPChars, {
       color: '#e7e7e7',
       '-webkit-text-stroke': '0px',
-      duration: 1,
+      duration: 0.7,
       ease: 'circ.out',
       stagger: 0.005,
     })
     .to(imgRef.current, {
       opacity: 1,
-      duration: 1,
+      duration: 0.5,
       ease: 'power2.out',
     });
 
@@ -561,22 +562,27 @@ const Main = () => {
          <div className="section8_inner">
           <div className="section8_t">
             <div className="section8_t_t"> {/* 왼쪽으로 회전할 박스들 */}
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>제 로컬환경과 보다 더<br/>좋게 느껴지네요.</>} se8_img={'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>팀원들과의 협업이 훨씬 쉬워졌어요.<br/>실시간으로 코드를 공유하고 수정할 수 있어서 회의나 피드백이 훨씬 더 효율적이에요.</>} se8_img={'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'홍길동'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>아이디어를 빠르게 시각화하고 테스트할 수 있어요.<br/>새로운 프로젝트의 프로토타입을 만드는 데 CodeSandbox만큼 빠르고 쉬운 도구는 없을 거예요.</>} se8_img={'https://images.unsplash.com/photo-1706373193792-52fc0b8b22e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김미루'} se8_span_tx={'퍼블리셔'}  />
+              <Se8_box se8_h3_tx={<>설치 없이 브라우저에서 바로 작업할 수 있어서 언제 어디서나 코딩할 수 있어요.<br/>출퇴근길에도 코드를 손볼 수 있어서 너무 좋아요!</>} se8_img={'https://images.unsplash.com/photo-1577880216142-8549e9488dad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'한동근'} se8_span_tx={'백엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>제 로컬환경과 보다 더 좋게 느껴지네요.</>} se8_img={'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>팀원들과의 협업이 훨씬 쉬워졌어요.<br/>실시간으로 코드를 공유하고 수정할 수 있어서 회의나 피드백이 훨씬 더 효율적이에요.</>} se8_img={'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'홍길동'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>아이디어를 빠르게 시각화하고 테스트할 수 있어요.<br/>새로운 프로젝트의 프로토타입을 만드는 데 CodeSandbox만큼 빠르고 쉬운 도구는 없을 거예요.</>} se8_img={'https://images.unsplash.com/photo-1706373193792-52fc0b8b22e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김미루'} se8_span_tx={'퍼블리셔'}  />
+              <Se8_box se8_h3_tx={<>설치 없이 브라우저에서 바로 작업할 수 있어서 언제 어디서나 코딩할 수 있어요.<br/>출퇴근길에도 코드를 손볼 수 있어서 너무 좋아요!</>} se8_img={'https://images.unsplash.com/photo-1577880216142-8549e9488dad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'한동근'} se8_span_tx={'백엔드 개발자'}  />
+              
               {/* 동일한 박스가 반복됩니다 */}
             </div>
             <div className="section8_t_bt"> {/* 오른쪽으로 회전할 박스들 */}
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>여러 프레임워크와 라이브러리 템플릿을 지원해서<br/>새 프로젝트를 시작할 때 많은 시간을 절약할 수 있었어요.</>} se8_img={'https://images.unsplash.com/photo-1539614474468-f423a2d2270c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'한수희'} se8_span_tx={'풀스텍 개발자'}  />
+              <Se8_box se8_h3_tx={<>코드를 작성하는 즉시 자동으로 저장돼서 실수로 저장하지 못해도 걱정할 필요가 없어요.<br/>덕분에 프로젝트의 진행 속도가 빨라졌어요</>} se8_img={'https://images.unsplash.com/photo-1545996124-0501ebae84d0?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'이철희'} se8_span_tx={'블록체인 개발자'}  />
+              <Se8_box se8_h3_tx={<>VS Code와 비슷한 확장 기능들을 사용할 수 있어서 익숙한 개발 환경처럼 느껴져요.<br/>플러그인 덕분에 생산성이 더 높아졌어요.</>} se8_img={'https://images.unsplash.com/photo-1593529467220-9d721ceb9a78?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김나희'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>CodeSandbox는 무료로 클라우드 서버를 제공해서<br/>개발과 테스트를 할 수 있어요.</>} se8_img={'https://images.unsplash.com/photo-1695927621677-ec96e048dce2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김재덕'} se8_span_tx={'백엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>여러 프레임워크와 라이브러리 템플릿을 지원해서<br/>새 프로젝트를 시작할 때 많은 시간을 절약할 수 있었어요.</>} se8_img={'https://images.unsplash.com/photo-1539614474468-f423a2d2270c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'한수희'} se8_span_tx={'풀스텍 개발자'}  />
+              <Se8_box se8_h3_tx={<>코드를 작성하는 즉시 자동으로 저장돼서 실수로 저장하지 못해도 걱정할 필요가 없어요.<br/>덕분에 프로젝트의 진행 속도가 빨라졌어요</>} se8_img={'https://images.unsplash.com/photo-1545996124-0501ebae84d0?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'이철희'} se8_span_tx={'블록체인 개발자'}  />
+              <Se8_box se8_h3_tx={<>VS Code와 비슷한 확장 기능들을 사용할 수 있어서 익숙한 개발 환경처럼 느껴져요.<br/>플러그인 덕분에 생산성이 더 높아졌어요.</>} se8_img={'https://images.unsplash.com/photo-1593529467220-9d721ceb9a78?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김나희'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>CodeSandbox는 무료로 클라우드 서버를 제공해서<br/>개발과 테스트를 할 수 있어요.</>} se8_img={'https://images.unsplash.com/photo-1695927621677-ec96e048dce2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김재덕'} se8_span_tx={'백엔드 개발자'}  />
+          
                       
               {/* 동일한 박스가 반복됩니다 */}
             </div>

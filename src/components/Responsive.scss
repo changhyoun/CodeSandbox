@@ -1,0 +1,102 @@
+@media (max-width: 1400px) {
+    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h1 {
+        font-size: 4em;
+   
+    }
+    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h2 {
+        font-size: 3em;
+        margin-bottom: 7%;
+    }
+    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) p{
+        font-size: 1em;
+    }
+    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) button {
+        width: 30%; 
+    }
+
+    #Main #section2 > div > div:nth-of-type(1) h1 {
+        font-size: 1.8em;
+    }
+    .Se2_box h2 {
+        color: #2e2e2e;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        font-family: "AppleNeoH";
+        font-size: 3em;
+        margin-top: 1%;
+    }
+    .Se2_box span {
+        margin-top: 5%;
+    }
+    #Main #section2 > div > div:nth-of-type(3) button {
+        width: 25%;
+        height: 50%;
+    }
+
+    #Main #section3 > div > div:nth-of-type(1) h2 {
+        font-size: 1.8em;
+    }
+
+    .Se3_box p {
+        font-size: 0.75em;
+    }
+
+    #Main #section4 > div > div:nth-of-type(1) h2 {
+        font-size: 1.8em;
+    }
+
+    #Main #section6 > div > div:nth-of-type(1) h2 {
+        font-family: "AppleNeoEB";
+        font-weight: 100;
+        font-size: 1.8em;
+        color: white;
+        margin: 2% 0;
+    }
+    .Se6_box p {
+        font-size: 0.75em;
+    }
+
+    #Main #section7 > div > div:nth-of-type(1) h2 {
+        font-size: 1.8em;        
+    }
+    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(2) a {
+        padding: 1.5%;
+    }
+
+    .Se8_box > div > div:nth-of-type(1) h3 {
+        font-family: "AppleNeoEB";
+        font-size: 1em;   
+    }
+    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(1) img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 30px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(2) {
+        width: 78%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) h1 {
+        font-size: 3em;
+        color: white;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        font-family: "AppleNeoSB";
+        text-align: center;
+    }
+    #Footer > div:nth-of-type(1) {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
