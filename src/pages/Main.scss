@@ -522,42 +522,75 @@ $text-color1 : #1D1D1D;
       }
     }
   }
-  #section8{
+  #section8 {
     width: 100%;
     height: 100vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    & > div{
+    overflow: hidden;
+    & > div {
       width: 60%;
       height: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      & > div:nth-of-type(1){
+  
+      & > div:nth-of-type(1) {
         width: 100%;
         height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        & > div{
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+        
+        & > div {
           width: 100%;
           height: 45%;
-          border: 1px solid;
           display: flex;
           white-space: nowrap;
           column-gap: 2%;
-          overflow-x: hidden;
+          
+        }
+  
+        /* 왼쪽으로 무한 회전 애니메이션 */
+        .section8_t_t {
+          animation: slide-left 50s linear infinite;
+        }
+  
+        /* 오른쪽으로 무한 회전 애니메이션 */
+        .section8_t_bt {
+          animation: slide-right 50s linear infinite;
         }
       }
-      & > div:nth-of-type(2){
+  
+      & > div:nth-of-type(2) {
         width: 100%;
         height: 20%;
         display: flex;
         justify-content: space-between;
       }
+    }
+  }
+  
+  /* 애니메이션 정의 */
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
     }
   }
 }

@@ -85,6 +85,12 @@ export {
     default as se8_person1 
   } from "../assets/se8_person1.png";
 
+// 푸터 
+import Footer_t_bt_back from "../assets/Footer_t_bt_back.webp"
+export {Footer_t_bt_back}
+
+
+
 
 
 

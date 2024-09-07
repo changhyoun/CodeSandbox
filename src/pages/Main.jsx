@@ -11,6 +11,7 @@ import Se6_box from '../components/Se6_box';
 import Se7_box from '../components/Se7_box';
 import Se8_box from '../components/Se8_box';
 import Se8_count from '../components/Se8_count';
+import Footer from '../components/Footer';
 
 
 gsap.registerPlugin(TextPlugin);
@@ -557,37 +558,38 @@ const Main = () => {
           
         </div>
         <div id="section8">
-          <div className="section8_inner">
-            <div className="section8_t">
-              <div className="section8_t_t">
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              </div>
-              <div className="section8_t_bt">
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-                <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
-              </div>
+         <div className="section8_inner">
+          <div className="section8_t">
+            <div className="section8_t_t"> {/* 왼쪽으로 회전할 박스들 */}
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              {/* 동일한 박스가 반복됩니다 */}
             </div>
-            <div className="section8_bt">
-              <Se8_count Se8_count_h3={'400만 +'} Se8_count_p={'유저들'}/>
-              <Se8_count Se8_count_h3={'10,000+'} Se8_count_p={'연결된 저장소'}/>
-              <Se8_count Se8_count_h3={'20,000+'} Se8_count_p={'단체'}/>
-              <Se8_count Se8_count_h3={'100만 +'} Se8_count_p={'작성한 코드 라인'}/>
+            <div className="section8_t_bt"> {/* 오른쪽으로 회전할 박스들 */}
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+              <Se8_box se8_h3_tx={<>It feels much more like<br/>my local environment.</>} se8_img={se8_person1} se8_p_tx={'김창현'} se8_span_tx={'프론트엔드 개발자'}  />
+                      
+              {/* 동일한 박스가 반복됩니다 */}
             </div>
           </div>
+          <div className="section8_bt">
+            <Se8_count Se8_count_h3={'400만 +'} Se8_count_p={'유저들'}/>
+            <Se8_count Se8_count_h3={'10,000+'} Se8_count_p={'연결된 저장소'}/>
+            <Se8_count Se8_count_h3={'20,000+'} Se8_count_p={'단체'}/>
+            <Se8_count Se8_count_h3={'100만 +'} Se8_count_p={'작성한 코드 라인'}/>
+          </div>
         </div>
+      </div>
+      <Footer/>
     </div>
   )
 }

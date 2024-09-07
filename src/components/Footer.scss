@@ -1,0 +1,79 @@
+#Footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    & > div:nth-of-type(1){
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & > div:nth-of-type(1){
+                width: 100%;
+                height: 30%;
+                border: 1px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h1{
+                    font-size: 3.5em;
+                    color: white;
+                    font-weight: 500;
+                    position: relative;
+                    overflow: hidden;
+                    display: inline-block;
+                    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+                    font-family: 'AppleNeoSB';
+                    text-align: center;
+                }
+                a{
+                    
+                    padding: 1.2%;
+                    background-color: #80AF81;
+                    border-radius: 5px;
+                    font-family: "AppleNeoM";
+                    transition: all 0.2s ease;
+                    font-size: 0.9em;
+                    display: inline-block;
+                    width: fit-content;
+                    &:hover{
+                      background-color: #89bc8b;
+                    }
+                  }
+            }
+            & > div:nth-of-type(2){
+                width: 100%;
+                height: 65%;
+                border: 1px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    
+                }
+            }
+        }
+    }
+    & > div:nth-of-type(2){
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        & > div{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
