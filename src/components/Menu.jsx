@@ -56,37 +56,37 @@ const Menu = () => {
     <div className='Menu'>
       <ul>
         <li>
-          <Link to="#">특징</Link>
+          <Link to="https://codesandbox.io/features">특징</Link>
         </li>
         <li
           className="has-submenu"
           onMouseEnter={handleMouseEnter1}
           onMouseLeave={handleMouseLeave1}
         >
-          <Link to="#">사용 사례</Link>
+          <Link to="https://codesandbox.io/use-cases">사용 사례</Link>
           <div className="submenu-content" ref={submenuRef1}>
-            <Link>
+            <Link to="https://codesandbox.io/cloud-development-environments">
               <SubMenuItem
                   icon={faBoxesPacking}
                   title="클라우드 개발 환경"
                   description="모든 개발자에게 2배 더 빠른 머신을 제공하세요"
                 />
             </Link>
-            <Link>
+            <Link to="https://codesandbox.io/improve-code-reviews">
               <SubMenuItem
                   icon={faMessage}
                   title="코드 리뷰"
                   description="흐름을 끊지 않고 PR을 검토하세요."
                 />
             </Link>
-            <Link>
+            <Link to="https://codesandbox.io/code-in-sandboxes">
               <SubMenuItem
                   icon={faFileCode}
                   title="샌드박스의 코드"
                   description="기록적인 시간 내에 아이디어의 프로토타입을 제작해 보세요."
                 />
             </Link>
-            <Link>
+            <Link to={"https://codesandbox.io/learn-and-experiment"}>
               <SubMenuItem
                   icon={faUserGraduate}
                   title="학습 및 실험"
@@ -100,30 +100,30 @@ const Menu = () => {
           onMouseEnter={handleMouseEnter2}
           onMouseLeave={handleMouseLeave2}
         >
-          <Link to="#">자원</Link>
+          <Link to="https://codesandbox.io/resources">자원</Link>
           <div className="submenu-content" ref={submenuRef2}>
-            <Link>
+            <Link to={"https://codesandbox.io/templates"}>
               <SubMenuItem
                   icon={faSwatchbook}
                   title="템플릿"
                   description="다음 프로젝트에 대한 영감을 찾아보세요."
                 />
             </Link>
-            <Link>
+            <Link to="https://codesandbox.io/blog">
               <SubMenuItem
                   icon={faBookOpenReader}
                   title="블로그"
                   description="우리 팀의 뉴스와 통찰력을 읽어보세요."
                 />
             </Link>
-            <Link>
+            <Link to="https://login.circle.so/sign_in?request_host=www.codesandbox.community#email">
               <SubMenuItem
                   icon={faUserGroup}
                   title="공동체"
                   description="다른 커뮤니티 구성원과 교류하세요."
                 />
             </Link>
-            <Link>
+            <Link to="https://codesandbox.io/changelog">
               <SubMenuItem
                   icon={faFileCircleCheck}
                   title="변경 내역"
@@ -133,13 +133,13 @@ const Menu = () => {
           </div>
         </li>
         <li>
-          <Link to="#">문서</Link>
+          <Link target='_blank' to="https://codesandbox.io/docs/learn">문서</Link>
         </li>
         <li>
-          <Link to="#">지원</Link>
+          <Link to="https://codesandbox.io/support">지원</Link>
         </li>
         <li>
-          <Link to="#">가격</Link>
+          <Link to="https://codesandbox.io/pricing">가격</Link>
         </li>
       </ul>
     </div>

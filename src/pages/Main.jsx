@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 import Header from '../components/Header';
-import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t, se4_bt1, se4_bt2, se4_bt3,se6_github_ic,se7_ic1,se7_ic2,se7_ic3,se7_ic4,se7_ic5,se7_ic6,se7_ic8,se7_ic9,se8_person1 } from '../components/image';
+import { se1_t_rt, rol1, rol2, rol3, rol4, rol5, rol6, rol7, rol8, rol9, se2_t, se3_t, se4_bt1, se4_bt2, se4_bt3, se6_github_ic, se7_ic1, se7_ic2, se7_ic3, se7_ic4, se7_ic5, se7_ic6, se7_ic8, se7_ic9, se8_person1 } from '../components/image';
 import Se2_box from '../components/Se2_box';
 import Se3_box from '../components/Se3_box';
 import Se6_box from '../components/Se6_box';
@@ -13,7 +13,6 @@ import Se8_box from '../components/Se8_box';
 import Se8_count from '../components/Se8_count';
 import Footer from '../components/Footer';
 import "../components/Responsive.scss"
-
 
 gsap.registerPlugin(TextPlugin);
 
@@ -31,12 +30,22 @@ const Main = () => {
   const se3BoxRefs = useRef([]);
   const section4Ref = useRef(null);
   const se4BoxRefs = useRef([]);
-  const [isFixed, setIsFixed] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
-  const section4TopRef = useRef(0);
+
+  const goFree = () => {
+    window.open('https://codesandbox.io/templates', '_blank');
+  };
+  const LearnMore = () => {
+    window.open('https://codesandbox.io/cloud-development-environments', '_blank');
+  };
+
+  const goLogin = () => {
+    window.location.href = 'https://codesandbox.io/signin?utm_source=landingpage';
+  };
 
   useEffect(() => {
     // 기존 애니메이션 설정
+    
     const h1Chars1 = h1Ref1.current.innerText.split("").map((char1) =>
       `<span class="char1">${char1}</span>`
     ).join("");
@@ -64,27 +73,27 @@ const Main = () => {
     tl.to(h1Ref1.current.querySelectorAll('.char1'), {
       color: '#80AF81',
       '-webkit-text-stroke': '0px',
-      duration: 0.7,
+      duration: 1,
       ease: 'power1.out',
       stagger: 0.02,
     })
     .to(h2Ref1.current.querySelectorAll('.char1'), {
       color: '#D6EFD8',
       '-webkit-text-stroke': '0px',
-      duration: 0.7,
+      duration: 1,
       ease: 'power2.out',
       stagger: 0.02,
     })
     .to(allPChars, {
       color: '#e7e7e7',
       '-webkit-text-stroke': '0px',
-      duration: 0.7,
+      duration: 1,
       ease: 'circ.out',
       stagger: 0.005,
     })
     .to(imgRef.current, {
       opacity: 1,
-      duration: 0.5,
+      duration: 1,
       ease: 'power2.out',
     });
 
@@ -201,6 +210,7 @@ const Main = () => {
       if (section2Ref.current) observer.observe(section2Ref.current);
     }
 
+  
     const handleScroll = () => {
       const section4Top = section4Ref.current.offsetTop; // 섹션4의 시작 위치
       const section4Height = section4Ref.current.offsetHeight; // 섹션4의 높이
@@ -251,6 +261,11 @@ const Main = () => {
     };
   }, []);
 
+ 
+
+
+
+
   return (
     <div id='Main'>
         <Header/>
@@ -270,7 +285,7 @@ const Main = () => {
                          <p ref={pRef2}>
                            협업 클라우드  개발 환경(CDE)을 제공합니다.
                          </p>
-                           <button>
+                           <button onClick={goFree} >
                                무료로 시작하세요
                            </button>
 
@@ -343,7 +358,7 @@ const Main = () => {
               <Se2_box se2_h2_tx={'60%'} se2_span_tx={`2026년까지 CDE를 통해 구축 및 배포되는 클라우드 워크로드 비율,\n Gartner에 따르면.`} shouldAnimate={shouldAnimate} />
             </div>
             <div className="se2_b">
-              <button>
+              <button onClick={LearnMore}>
                 CDE에 대해 자세히 알아보기
                 <span className="material-symbols-rounded">
                   arrow_forward_ios
@@ -416,7 +431,7 @@ const Main = () => {
                 />
               </div>
               <div className="section3_bt_bt">
-                <Link ref={section3aRef} style={{ opacity: 0 }}  >
+                <Link target='_blank' to={"https://codesandbox.io/signin?utm_source=landingpage"} ref={section3aRef} style={{ opacity: 0 }}  >
                   Start for free
                   <span className="material-symbols-rounded">
                   arrow_forward_ios
@@ -427,9 +442,9 @@ const Main = () => {
           </div>
         </div>
         <div id="section4">
-          <div className="section4_inner"  ref={section4Ref} >
+          <div className="section4_inner" ref={section4Ref} >
             <div className="section4_t">
-              <span class="material-symbols-rounded">
+              <span className="material-symbols-rounded">
                 rebase_edit
               </span>
               <h2>워크플로를 가속화하세요.</h2>
@@ -439,7 +454,7 @@ const Main = () => {
               <div className="Se4_box" ref={el => se4BoxRefs.current[0] = el}>
                 <div className="Se4_box_t">
                   <div className="Se4_box_t_in">
-                    <span class="material-symbols-rounded">
+                    <span className="material-symbols-rounded">
                         link
                       </span>
                       <h4>모든 PR과 브랜치가 URL입니다.</h4>
@@ -455,7 +470,7 @@ const Main = () => {
               <div className="Se4_box" ref={el => se4BoxRefs.current[1] = el}>
                 <div className="Se4_box_t">
                   <div className="Se4_box_t_in">
-                    <span class="material-symbols-rounded">
+                    <span className="material-symbols-rounded">
                         history
                       </span>
                       <h4>코드를 신속하게 검토하세요.</h4>
@@ -472,7 +487,7 @@ const Main = () => {
               <div className="Se4_box" ref={el => se4BoxRefs.current[2] = el}>
                 <div className="Se4_box_t">
                   <div className="Se4_box_t_in">
-                    <span class="material-symbols-rounded">
+                    <span className="material-symbols-rounded">
                         Groups
                       </span>
                       <h4>팀 전체에 힘을 실어주세요.</h4>
@@ -503,11 +518,11 @@ const Main = () => {
                 추가적인 설정 없이도 안정적으로 작동하며, 기존 개발 환경에 맞춰 최적화된 성능을 제공합니다.</span>
               </div>
               <div className="section6_bt">
-                <Se6_box se6_span_tx={'devices'} se6_h3_tx={<>원하는 에디터를 자유롭게 사용하세요.</>} se6_a_tx={'VS Code 확장 프로그램'} se6_p_tx={<>VS Code와 우리의 웹 에디터를 자유롭게 전환하며<br/>코드 작성과 협업을 끊김 없이 이어가세요.</>} />
-                <Se6_box se6_h3_tx={'GitHub 통합 기능'} se6_a_tx={'저희 GitHub 앱을 설치하세요.'} se6_p_tx={<>PR(풀 리퀘스트)를 신속하게 검토하고<br/>자동 배포 미리보기를 받아보세요.</>} >
+                <Se6_box se6_a={'https://codesandbox.io/vscode-extension'} se6_span_tx={'devices'} se6_h3_tx={<>원하는 에디터를 자유롭게 사용하세요.</>} se6_a_tx={'VS Code 확장 프로그램'} se6_p_tx={<>VS Code와 우리의 웹 에디터를 자유롭게 전환하며<br/>코드 작성과 협업을 끊김 없이 이어가세요.</>} />
+                <Se6_box se6_a={'https://codesandbox.io/docs/learn/integrations/github-app'} se6_h3_tx={'GitHub 통합 기능'} se6_a_tx={'저희 GitHub 앱을 설치하세요.'} se6_p_tx={<>PR(풀 리퀘스트)를 신속하게 검토하고<br/>자동 배포 미리보기를 받아보세요.</>} >
                   <img src={se6_github_ic} alt="se6_github_ic" />
                 </Se6_box>
-                <Se6_box se6_h3_tx={'사전 구성된 환경'} se6_a_tx={'더 알아보기'} se6_p_tx={<>우리는 Dev 컨테이너를 사용하여 필요한 도구,<br/>라이브러리, 종속성 등이 모두<br/>사전 구성된 환경을 제공합니다.<br/>이를 통해 번거로운 설정 과정 없이<br/>바로 코딩을 시작할 수 있습니다</>} />
+                <Se6_box se6_a={'https://codesandbox.io/docs/tutorial/getting-started-with-dev-containers'} se6_h3_tx={'사전 구성된 환경'} se6_a_tx={'더 알아보기'} se6_p_tx={<>우리는 Dev 컨테이너를 사용하여 필요한 도구,<br/>라이브러리, 종속성 등이 모두<br/>사전 구성된 환경을 제공합니다.<br/>이를 통해 번거로운 설정 과정 없이<br/>바로 코딩을 시작할 수 있습니다</>} />
               </div>
             </div>
         </div>
@@ -520,36 +535,36 @@ const Main = () => {
             </div>
             <div className="section7_bt">
               <div className="section7_bt_t">
-                <Link>
+                <Link target='_blank' to={'https://codesandbox.io/templates/codeium'}>
                   <Se7_box se7_ic={se7_ic1} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'1.7k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic2} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'267.7k'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/angular'}>
+                  <Se7_box se7_ic={se7_ic2} se7_h5_tx={'Angular'} se7_p_tx={<>Angular를 빠르게 시작하는 가장 쉬운 방법이예요!</>} se7_small={'267.7k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic3} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'63.1k'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/docker'}>
+                  <Se7_box se7_ic={se7_ic3} se7_h5_tx={'Docker'} se7_p_tx={<>CodeSandbox에서 Docker를 가장 쉽게 시작하는 방법이예요.</>} se7_small={'63.1k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic4} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'18.8k'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/html-css'}>
+                  <Se7_box se7_ic={se7_ic4} se7_h5_tx={'HTML + CSS'} se7_p_tx={<>HTML과 CSS를 위한 템플릿.</>} se7_small={'18.8k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic5} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'15.8k'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/javascript'}>
+                  <Se7_box se7_ic={se7_ic5} se7_h5_tx={'JavaScript'} se7_p_tx={<>JavaScript를 위한 템플릿.</>} se7_small={'15.8k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic6} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'79.9k'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/nextjs'}>
+                  <Se7_box se7_ic={se7_ic6} se7_h5_tx={'Next.js'} se7_p_tx={<>CodeSandbox 팀이 제공하는 공식 Next.js 템플릿.</>} se7_small={'79.9k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic6} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'1.1k'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/postgres-drizzle-nextjs'}>
+                  <Se7_box se7_ic={se7_ic6} se7_h5_tx={'Next.js + Postgres'} se7_p_tx={<>Next.js, Postgres, Drizzle-ORM을 사용하는<br/>풀스택 애플리케이션의 완벽한 스타터 템플릿.</>} se7_small={'1.1k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic8} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'85.5k'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/python'}>
+                  <Se7_box se7_ic={se7_ic8} se7_h5_tx={'Python'} se7_p_tx={<>CodeSandbox용 Python 스타터 템플릿.</>} se7_small={'85.5k'}/>
                 </Link>
-                <Link>
-                  <Se7_box se7_ic={se7_ic9} se7_h5_tx={'AI Code Completion'} se7_p_tx={<>Codeium으로 강화된 내장 코드 완성 기능을<br/>사용하여 더 빠르게 코드를 작성하세요.</>} se7_small={'0'}/>
+                <Link target='_blank' to={'https://codesandbox.io/templates/react-vite'}>
+                  <Se7_box se7_ic={se7_ic9} se7_h5_tx={'React (JS)'} se7_p_tx={<>React 애플리케이션을 가장 빠르게 시작하는 방법!<br/>서버에서는 Vite를, 브라우저에서는 create-react-app을 사용합니다.</>} se7_small={'0'}/>
                 </Link>
               </div>
               <div className="section7_bt_bt">
-                <Link>
+                <Link target='_blank' to={"https://codesandbox.io/templates"}>
                   Explore templates
                 </Link>
               </div>

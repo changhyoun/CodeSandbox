@@ -89,6 +89,32 @@ export {
 import Footer_t_bt_back from "../assets/Footer_t_bt_back.webp"
 export {Footer_t_bt_back}
 
+// 푸터 아이콘
+export { 
+  default as github_ic 
+} from "../assets/github_ic.svg";
+export { 
+  default as github_ic_hover
+} from "../assets/github_ic_hover.svg";
+export { 
+  default as twitter_ic 
+} from "../assets/twitter_ic.svg";
+export { 
+  default as twitter_ic_hover 
+} from "../assets/twitter_ic_hover.svg";
+export { 
+  default as earth_ic 
+} from "../assets/earth_ic.svg";
+export { 
+  default as earth_ic_hover 
+} from "../assets/earth_ic_hover.svg";
+export { 
+  default as youtube_ic 
+} from "../assets/youtube_ic.svg";
+export { 
+  default as youtube_ic_hover 
+} from "../assets/youtube_ic_hover.svg";
+
 
 
 

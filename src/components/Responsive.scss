@@ -99,4 +99,15 @@
         align-items: center;
         justify-content: center;
     }
+
+    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) .footer-column h4 {
+        font-size: 0.9em;
+    }
+    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) .footer-column ul li a {
+        font-size: 0.75em;
+    }
+    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) .footer-column {
+        flex: 1;
+        margin: 0 0px;
+    }
 }

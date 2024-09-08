@@ -17,12 +17,12 @@ const Se7_box = ({se7_ic,se7_h5_tx,se7_p_tx,se7_small}) => {
         </div>
         <div className="Se7_box_rt">
           <div className="Se7_box_rt_t">
-            <span class="material-symbols-rounded">
+            <span className="material-symbols-rounded">
               widgets
             </span>
           </div>
           <div className="Se7_box_rt_bt">
-            <span class="material-symbols-rounded">
+            <span className="material-symbols-rounded">
             Network_Node
             </span>
             <small>

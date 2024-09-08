@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import "./Se6_box.scss";
 import { Link } from 'react-router-dom';
 
-const Se6_box = forwardRef(({ se6_h3_tx, se6_p_tx, se6_span_tx, se6_a_tx, children }, ref) => {
+const Se6_box = forwardRef(({ se6_h3_tx,se6_a, se6_p_tx, se6_span_tx, se6_a_tx, children }, ref) => {
   return (
     <div className='Se6_box' ref={ref}>
       {children} {/* 여기서 children을 추가하여, 자식 요소를 렌더링합니다 */}
@@ -12,7 +12,7 @@ const Se6_box = forwardRef(({ se6_h3_tx, se6_p_tx, se6_span_tx, se6_a_tx, childr
       <h4>{se6_h3_tx}</h4>
       <p>{se6_p_tx}</p>
       
-      <Link>
+      <Link to={se6_a}>
         {se6_a_tx}
         <span className="material-symbols-rounded">
           arrow_forward_ios

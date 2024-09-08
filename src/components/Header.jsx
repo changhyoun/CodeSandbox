@@ -3,6 +3,7 @@ import "./Header.scss";
 import { FullLogo, FullLogo_wh } from './image';
 import Menu from './Menu';
 import { gsap } from 'gsap';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [logocl, setLogocl] = useState(FullLogo);
@@ -11,6 +12,15 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollTop = useRef(0);
   const buttonRef = useRef(null);
+  const navigate = useNavigate();
+
+  const goLogin = () => {
+    window.location.href = 'https://codesandbox.io/signin?utm_source=landingpage';
+  };
+  const goFree = () => {
+    window.open('https://codesandbox.io/templates', '_blank');
+  };
+
 
   const toggleLogo = () => {
     setTransitionClass('fade-out');
@@ -62,8 +72,8 @@ const Header = () => {
           <Menu />
         </div>
         <div className="hd_rt">
-          <p>로그인</p>
-          <button
+          <p onClick={goLogin}>로그인</p>
+          <button onClick={goFree}
           >
             무료 체험
           </button>
