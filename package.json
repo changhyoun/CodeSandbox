@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://changhyoun.github.io/CodeSandbox",
+  "homepage": "http://changhyoun.github.io/codesandbox",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
