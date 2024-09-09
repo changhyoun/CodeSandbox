@@ -100,7 +100,8 @@ const Main = () => {
     const images = gsap.utils.toArray(rolRef.current.children);
     const totalWidth = images.length * images[0].offsetWidth;
 
-    gsap.to(images, {
+     // 애니메이션을 제어할 수 있도록 변수에 저장
+     const rollingAnimation = gsap.to(images, {
       x: `-=${totalWidth}`,
       ease: 'none',
       duration: 240,
@@ -109,6 +110,10 @@ const Main = () => {
         x: gsap.utils.unitize(value => parseFloat(value) % totalWidth)
       }
     });
+
+    // 호버 이벤트 리스너 추가
+    rolRef.current.addEventListener('mouseenter', () => rollingAnimation.pause());
+    rolRef.current.addEventListener('mouseleave', () => rollingAnimation.resume());
 
     // h2를 특수 문자로 초기화
     const originalText = "전체 팀을 위한 하나의 환경,";
@@ -398,9 +403,11 @@ const Main = () => {
                   se3_h3_tx={'모든 사람의 컴퓨터에서 작동,'} 
                   se3_p_tx={
                     <>
-                      모든 개발자가 동일한 경험을 할 수 있도록<br />
+                      모든 개발자가 동일한<br/>
+                      경험을 할 수 있도록<br/>
                       각 지점을 클라우드가 아닌<br />
-                      중앙 집중식 CDE에서 실행합니다.
+                      중앙 집중식 CDE에서<br/>
+                      실행합니다.
                     </>
                   }
                 />
@@ -410,9 +417,11 @@ const Main = () => {
                   se3_h3_tx={'언제나 24시간 협업 가능,'} 
                   se3_p_tx={
                     <>
-                      CodeSandbox는 팀 전체가 언제든지 동일한 환경에서<br />
-                      실시간으로 코드 작업을 할 수 있는<br />
-                      유일한 완전 협업 CDE입니다.
+                      CodeSandbox는 팀 전체가<br />
+                      언제든지 동일한 환경에서<br />
+                      실시간으로 코드 작업을<br />
+                      할 수 있는 유일한<br />
+                      완전 협업 CDE입니다.
                     </>
                   }
                 />
@@ -424,8 +433,9 @@ const Main = () => {
                     <>
                       우리는 SOC 2 Type II를 준수하여<br />
                       코드와 데이터의 보안을 보장합니다.<br />
-                      이를 통해 유연한 권한 설정, 접근 제어,<br />
-                      보안 모니터링, 비공개 npm 등의 기능을 제공합니다.
+                      이를 통해 유연한 권한 설정,<br />
+                      접근 제어, 보안 모니터링,<br />
+                      비공개 npm 등의 기능을 제공합니다.
                     </>
                   }
                 />
@@ -475,8 +485,7 @@ const Main = () => {
                       </span>
                       <h4>코드를 신속하게 검토하세요.</h4>
                       <p>매주 PR 리뷰에 드는 시간을 절약하세요.<br/>
-                      코드, 테스트, 미리 보기를 확인하고<br/>
-                      필요한 변경을 한 뒤 바로 병합하세요</p>
+                      코드, 테스트, 미리 보기를 확인하고 필요한 변경을 한 뒤 바로 병합하세요</p>
                   </div>
                    
                 </div>
