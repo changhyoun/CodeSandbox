@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="/CodeSandbox">
       <div className="App">
         <Routes>
           <Route path="/" element={<Main />} />
