@@ -248,20 +248,20 @@ const Main = () => {
       // 애니메이션 상태에 대한 조건 설정
       if (relativeProgress >= 0.6) {
         // 마지막 구간 (80% ~ 100%)
-        gsap.to(se4BoxRefs.current[0], { opacity: 0.1, left: '30%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(se4BoxRefs.current[1], { opacity: 0.1, left: '15%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(se4BoxRefs.current[2], { opacity: 1, left: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[0], { opacity: 0.1, top: '30%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[1], { opacity: 0.1, top: '15%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[2], { opacity: 1, top: '0%', duration: 0.5, ease: 'power2.out' });
       
       } else if (relativeProgress >= 0.2) {
         // 시작 구간 (20% ~ 50%)
-        gsap.to(se4BoxRefs.current[0], { opacity: 0.1, left: '15%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(se4BoxRefs.current[1], { opacity: 1, left: '0%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(se4BoxRefs.current[2], { opacity: 0, left: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[0], { opacity: 0.1, top: '15%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[1], { opacity: 1, top: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[2], { opacity: 0, top: '0%', duration: 0.5, ease: 'power2.out' });
       } else {
         // 초기 상태 (0% ~ 20%)
-        gsap.to(se4BoxRefs.current[0], { opacity: 1, left: '0%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(se4BoxRefs.current[1], { opacity: 0, left: '0%', duration: 0.5, ease: 'power2.out' });
-        gsap.to(se4BoxRefs.current[2], { opacity: 0, left: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[0], { opacity: 1, top: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[1], { opacity: 0, top: '0%', duration: 0.5, ease: 'power2.out' });
+        gsap.to(se4BoxRefs.current[2], { opacity: 0, top: '0%', duration: 0.5, ease: 'power2.out' });
       }
     };
     window.addEventListener('scroll', handleScroll);
