@@ -115,6 +115,11 @@ export {
   default as youtube_ic_hover 
 } from "../assets/youtube_ic_hover.svg";
 
+// 메타 이미지
+import ogImage from "../assets/ogImage.jpg"
+export {ogImage}
+
+
 
 
 
