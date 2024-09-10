@@ -122,6 +122,7 @@ const Main = () => {
     ).join('');
     section3h2Ref.current.innerText = scrambledText;
 
+    console.log('h2Ref1',h2Ref1.current)
     // Intersection Observer 설정
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -129,6 +130,7 @@ const Main = () => {
           setShouldAnimate(true);
           observer.disconnect();
 
+  
           // GSAP 애니메이션 설정
           const h2Animation = gsap.timeline();
           h2Animation.to(section3h2Ref.current, {
@@ -172,8 +174,12 @@ const Main = () => {
       { threshold: 0.9 }
     );
 
-    if (window.scrollY > section2Ref.current.offsetTop + section2Ref.current.offsetHeight * 0.8) {
-      setShouldAnimate(true);
+      // 768px 이하의 화면 크기에서는 애니메이션을 무조건 true로 설정
+  const isMobile = window.innerWidth <= 768;
+  
+  if (isMobile || window.scrollY > section2Ref.current.offsetTop + section2Ref.current.offsetHeight * 0.8) {
+    setShouldAnimate(true);
+
 
       gsap.to(section3h2Ref.current, {
         duration: 1,
@@ -267,10 +273,6 @@ const Main = () => {
   }, []);
 
  
-
-
-
-
   return (
     <div id='Main'>
         <Header/>
@@ -474,7 +476,7 @@ const Main = () => {
                    
                 </div>
                 <div className="Se4_box_bt">
-                  <video autoPlay muted src={se4_bt1}></video>
+                  <video autoPlay muted playsInline src={se4_bt1}></video>
                 </div>
               </div>
               <div className="Se4_box" ref={el => se4BoxRefs.current[1] = el}>
@@ -506,7 +508,7 @@ const Main = () => {
                    
                 </div>
                 <div className="Se4_box_bt">
-                  <video autoPlay muted src={se4_bt3}></video>
+                  <video playsInline autoPlay muted src={se4_bt3}></video>
                 </div>
               </div>
               

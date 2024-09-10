@@ -8,6 +8,24 @@ const Se2_box = ({ se2_h2_tx, se2_p_tx, se2_span_tx, shouldAnimate }) => {
   const spanRef = useRef(null); // span 요소 참조
 
   useEffect(() => {
+    // 화면 크기에 따라 shouldAnimate가 true로 설정되도록 수정
+    const checkScreenWidth = () => {
+      if (window.innerWidth <= 768) {
+        shouldAnimate = true; // 768px 이하일 경우 애니메이션을 항상 실행
+      }
+    };
+
+    checkScreenWidth(); // 컴포넌트가 처음 렌더링될 때 화면 크기 확인
+
+    window.addEventListener('resize', checkScreenWidth); // 창 크기 변경 시 이벤트 리스너 추가
+
+    // 컴포넌트 언마운트 시 이벤트 리스너 제거
+    return () => {
+      window.removeEventListener('resize', checkScreenWidth);
+    };
+  }, []); // 빈 배열을 사용하여 한 번만 실행
+
+  useEffect(() => {
     if (!shouldAnimate) return; // 애니메이션 조건 확인
 
     const numberMatch = se2_h2_tx.match(/\d+/); // 숫자만 추출
