@@ -462,7 +462,7 @@
     }
 }
 
-@media only screen and (max-width: 700px) and (orientation: landscape) {
+@media only screen and (max-width: 750px) and (orientation: landscape) {
 
 
     #Header > div > div:nth-of-type(2) p,
@@ -660,11 +660,14 @@
         height: 120vh;
     }
     .Se8_box > div > div:nth-of-type(1) h3{
-        font-size: 0.8em;
+        font-size: 0.7em;
+    }
+    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(2) p{
+        font-size: 0.7em;
     }
     .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(1) img{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
     .Se8_count h3{
         font-size: 1.2em;
