@@ -10,7 +10,7 @@ const Se2_box = ({ se2_h2_tx, se2_p_tx, se2_span_tx, shouldAnimate }) => {
   useEffect(() => {
     // 화면 크기에 따라 shouldAnimate가 true로 설정되도록 수정
     const checkScreenWidth = () => {
-      if (window.innerWidth <= 800) {
+      if (window.innerWidth <= 850) {
         shouldAnimate = true;
       }
     };

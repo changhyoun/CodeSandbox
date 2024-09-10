@@ -175,7 +175,7 @@ const Main = () => {
     );
 
       // 800px 이하의 화면 크기에서는 애니메이션을 무조건 true로 설정
-  const isMobile = window.innerWidth <= 800;
+  const isMobile = window.innerWidth <= 850;
   
   if (isMobile || window.scrollY > section2Ref.current.offsetTop + section2Ref.current.offsetHeight * 0.8) {
     setShouldAnimate(true);
