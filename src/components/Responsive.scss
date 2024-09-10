@@ -361,11 +361,117 @@
 
 }
 
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    .Menu ul li a,
+    #Header > div > div:nth-of-type(2) button,
+    #Header > div > div:nth-of-type(2) p{
+        font-size: 0.7em;
+    }
+    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div p{
+        font-size: 0.65em;
+    }
+    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div h4{
+        font-size: 0.8em;
+    }
+    #Main #section2{
+        height: 120vh;
+    }
+    #Main #section2 > div > div:nth-of-type(1) h1{
+        font-size: 1.3em;
+    }
+    .Se2_box h2{
+        font-size: 1.5em;
+    }
+    .Se2_box p{
+        font-size: 1.5em;
+    }
+    .Se2_box{
+        width: 26%;
+    }
+    #Main #section3{
+        height: 120vh;
+    }
+    #Main #section3 > div > div:nth-of-type(1) h2{
+        font-size: 1.3em;
+    }
+    .Se3_box{
+        width: 23.5%;
+    }
+    .Se3_box h3 {
+        font-size: 0.75em;
+    }
+    .Se3_box p {
+        font-size: 0.6em;
+        zoom: 0.9;
+    }
+    #Main #section4 > div > div:nth-of-type(1) h2{
+        font-size: 1.3em;
+    }
+    #Main #section4 > div > div:nth-of-type(1) span {
+        font-size: 2em;
+    }
+    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div{
+        width: 90%;
+    }
+    #Main #section6{
+        height: 120vh;
+    }
+    #Main #section6 > div > div:nth-of-type(1) h2{
+        font-size: 1.3em;
+    }
+    .Se6_box h4{
+        font-size: 0.7em;
+    }
+    .Se6_box p{
+        font-size: 0.55em;
+    }
+    #Main #section7 > div > div:nth-of-type(1) h2 {
+        font-size: 1.2em;
+    }
+
+    #Main #section7{
+        height: 160vh;
+    }
+    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(2) h5{
+        font-size: 0.8em;
+    }
+    #Main #section8{
+        height: 120vh;
+    }
+    .Se8_box > div > div:nth-of-type(1) h3{
+        font-size: 0.8em;
+    }
+    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(2) p{
+        font-size: 0.8em;
+    }
+    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(2) span{
+        font-size: 0.65em;
+    }
+    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(1) img{
+        height: 30px;
+        width: 30px;
+    }
+    .Se8_count h3{
+        font-size: 1.5em;
+    }
+    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) h1{
+        font-size: 1.5em;
+    }
+    #Footer > div:nth-of-type(2){
+        height: 100vh;
+    }
+}
+
 @media only screen and (max-width: 700px) and (orientation: landscape) {
+
 
     #Header > div > div:nth-of-type(2) p,
     #Header > div > div:nth-of-type(2) button{
         font-size: 0.7em;
+    }
+
+    #Header > div > div:nth-of-type(2){
+        width: 20%;
     }
     
     #Header > div{
@@ -393,6 +499,10 @@
     }
     #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) p{
         font-size: 0.8em;
+    }
+
+    #Main #section2{
+        height: 120vh;
     }
 
     #Main #section2 > div{
@@ -565,6 +675,10 @@
     #Footer > div:nth-of-type(2){
         height: 100vh;
     }
+
+    #Footer > div:nth-of-type(2){
+        height: 110vh;
+    }
 }
 
 
@@ -592,7 +706,7 @@
     .submenu-content{
         display: none;
     }
-    
+
     .Menu{
         width: 76%;
     }
