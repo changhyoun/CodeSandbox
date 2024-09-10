@@ -1,80 +1,90 @@
 // 노트북 1.25배
 @media (max-width: 1600px) {
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h1 {
-        font-size: 3em;
-    }
-    
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h2 {
-        font-size: 2em;
-        margin-bottom: 5%;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) p{
-        font-size: 1em;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) button {
-        width: 30%;
-        height: 8%;
+    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1){
+        h1{
+            font-size: 3em;
+        }
+        h2{
+            font-size: 2em;
+            margin-bottom: 5%;
+        }
+        p{
+            font-size: 1em;    
+        }
+        button {
+            width: 30%;
+            height: 8%;
+        }
     }
     #Main #section1 > div > div:nth-of-type(2) .rolling img{
         height: 50%;
     }
 
+    // se2
     #Main #section2 > div > div:nth-of-type(1) h1 {
         font-size: 1.8em;
     }
-    .Se2_box h2 {
-        color: #2e2e2e;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-        font-family: "AppleNeoH";
-        font-size: 3em;
-        margin-top: 1%;
+    .Se2_box{
+        h2{
+            color: #2e2e2e;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+            font-family: "AppleNeoH";
+            font-size: 3em;
+            margin-top: 1%;
+        }
+        span{
+            margin-top: 5%;
+            font-size: 0.85em;
+        }
     }
-    .Se2_box span {
-        margin-top: 5%;
-        font-size: 0.85em;
-    }
+
     #Main #section2 > div > div:nth-of-type(3) button {
         width: 25%;
         height: 50%;
     }
 
-    .Se3_box .round{
-        width: 90px;
-        height: 90px;
+    // se3
+    .Se3_box{
+        .round{
+            width: 90px;
+            height: 90px;
+        }
+        h3{
+            font-size: 1em;
+        }
+        p {
+            font-size: 0.75em;
+        }
     }
 
     #Main #section3 > div > div:nth-of-type(1) h2 {
         font-size: 1.8em;
     }
 
-    .Se3_box h3{
-        font-size: 1em;
+    // se4
+    #Main #section4 > div > div:nth-of-type(1){
+        h2 {
+            font-size: 1.8em;
+        }
+        span{
+            font-size: 3em;
+        }
     }
-
-    .Se3_box p {
-        font-size: 0.75em;
+    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div{
+        h4{
+            width: auto;
+        }
+        p{
+            width: auto;
+            font-size: 0.8em;
+            height: auto;
+        }
+        span{
+            font-size: 1.5em;
+        }
     }
-
-    #Main #section4 > div > div:nth-of-type(1) h2 {
-        font-size: 1.8em;
-    }
-
-    #Main #section4 > div > div:nth-of-type(1) span{
-        font-size: 3em;
-    }
-
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div h4{
-        width: auto;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div p{
-        width: auto;
-        font-size: 0.8em;
-        height: auto;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div span{
-        font-size: 1.5em;
-    }
-
+  
+    // se6
     #Main #section6 > div > div:nth-of-type(1) h2 {
         font-family: "AppleNeoEB";
         font-weight: 100;
@@ -86,6 +96,7 @@
         font-size: 0.7em;
     }
 
+    // se7
     #Main #section7 > div > div:nth-of-type(1) h2 {
         font-size: 1.8em;        
     }
@@ -107,6 +118,7 @@
         font-size: 0.6em;
     }
 
+    // se8
     .Se8_box > div > div:nth-of-type(1) h3 {
         font-family: "AppleNeoEB";
         font-size: 0.9em;   
@@ -126,24 +138,17 @@
         justify-content: center;
     }
 
-    .Se8_count h3{
-        font-size: 1.8em;
-    }
-    .Se8_count p{
-        font-size: 0.9em;
+    .Se8_count{
+        h3{
+            font-size: 1.8em;
+        }
+        p{
+            font-size: 0.9em;
+        }
     }
 
-    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) h1 {
-        font-size: 2.5em;
-        color: white;
-        font-weight: 500;
-        position: relative;
-        overflow: hidden;
-        display: inline-block;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        font-family: "AppleNeoSB";
-        text-align: center;
-    }
+     // Footer
+  
     #Footer > div:nth-of-type(1) {
         width: 100%;
         height: 70vh;
@@ -155,7 +160,17 @@
     #Footer > div:nth-of-type(2){
         height: 50vh;
     }
-
+    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) h1 {
+        font-size: 2.5em;
+        color: white;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        font-family: "AppleNeoSB";
+        text-align: center;
+    }
     #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) a{
         font-size: 0.8em;
         padding: 1% 1.4%;
@@ -188,1012 +203,1337 @@
 }
 
 @media only screen and (max-width: 1400px) and (orientation: landscape) {
-    .submenu-content{
-        display: none;
+    .submenu-content {
+      display: none;
     }
-    #Header > div{
+  
+    #Header {
+      > div {
         width: 80%;
-    }
-    #Header > div > div:nth-of-type(1){
-        width: 70%;
-    }
-    #Main #section1 > div > div:nth-of-type(1){
-        width: 80%;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h1{
-        font-size: 2em;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-        margin-bottom: 3%;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) button{
-        width: 37%;
-        height: 12%;
-        max-width: 165px;
-    }
-    #Main #section1 > div > div:nth-of-type(2) .se1_bt_wrap{
-        height: 100%;
-    }
-    #Main #section1 > div > div:nth-of-type(2) .rolling{
-        height: 100%;
-    }
-    #Main #section1 > div > div:nth-of-type(2) .rolling img{
-        height: 100%;
-    }
-
-    #Main #section2 > div{
-        width: 80%;
-    }
-    #Main #section2 > div > div:nth-of-type(2){
-        justify-content: space-between;
-    }
-
-    #Main #section2 > div > div:nth-of-type(1) h1{
-        font-size: 1.5em;
-    }
-
-    .Se2_box h2{
-        font-size: 2em;
-    }
-
-    .Se2_box span{
-        font-size: 0.75em;
-        margin: 0;
-    }
-    .Se2_box p{
-        margin-top: 0;
-    }
-
-    #Main #section2 > div > div:nth-of-type(3) button{
-        width: 31%;
-        height: 75%;
-        max-width: 230px;
-    }
-    
-    #Main #section3 > div{
-        width: 90%;
-        height: 90%;
-    }
-    
-    #Main #section3 > div > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-    }
-    #Main #section3 > div > div:nth-of-type(1) p{
-        font-size: 0.8em;
-    }
-
-    .Se3_box .round span{
-        font-size: 1.5em;
-        
-    }
-    .Se3_box h3{
-        font-size: 0.9em;
-    }
-    .Se3_box p{
-        font-size: 0.6em;
-    }
-    #Main #section3 > div > div:nth-of-type(2) > div:nth-of-type(2){
-        align-items: end;
-    }
-
-    #Main #section4 > div{
-        width: 70%;
-    }
-
-    #Main #section4 > div > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-    }
-    #Main #section4 > div > div:nth-of-type(1) p{
-        font-size: 0.8em;
-    }
-
-    #Main #section4 > div > div:nth-of-type(2){
-        height: 65%;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div{
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #Main #section4 > div > div:nth-of-type(2) > div{
-        border-radius: 5px;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div p{
-        text-align: left;
-    }
-
-    #Main #section6 > div{
-        width: 80%;
-        height: 80%;
-    }
-    #Main #section6 > div > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-    }
-    #Main #section6 > div > div:nth-of-type(1) span{
-        font-size: 0.8em;
-    }
-    
-    #Main #section7{
-        height: 140vh;
-    }
-    #Main #section7 > div{
-        width: 80%;
-        height: 90%;
-    }
-    #Main #section7 > div > div:nth-of-type(1){
-        justify-content: center;
-    }
-    #Main #section7 > div > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-        margin: 0;
-    }
-
-    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(1) a{
-        height: 32%;
-        width: 32%;
-    }
-
-    #Main #section8 > div{
-        width: 80%;
-    }
-
-    #Footer > div:nth-of-type(1){
-        height: 100vh;
-    }
-    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1){
-        justify-content: space-around;
-    }
-    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) h1{
-        font-size: 1.8em;
-    }
-    #Footer > div:nth-of-type(2){
-        height: 90vh;
-    }
-
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1){
-        width: 15%;
-    }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2){
-        width: 80%;
-    }
-
-}
-
-@media only screen and (max-width: 900px) and (orientation: landscape) {
-    .Menu ul li a,
-    #Header > div > div:nth-of-type(2) button,
-    #Header > div > div:nth-of-type(2) p{
-        font-size: 0.7em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div p{
-        font-size: 0.65em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div h4{
-        font-size: 0.8em;
-    }
-    #Main #section2{
-        height: 120vh;
-    }
-    #Main #section2 > div > div:nth-of-type(1) h1{
-        font-size: 1.3em;
-    }
-    .Se2_box h2{
-        font-size: 1.5em;
-    }
-    .Se2_box p{
-        font-size: 1.5em;
-    }
-    .Se2_box{
-        width: 26%;
-    }
-    #Main #section3{
-        height: 120vh;
-    }
-    #Main #section3 > div > div:nth-of-type(1) h2{
-        font-size: 1.3em;
-    }
-    .Se3_box{
-        width: 23.5%;
-    }
-    .Se3_box h3 {
-        font-size: 0.75em;
-    }
-    .Se3_box p {
-        font-size: 0.6em;
-        zoom: 0.9;
-    }
-    #Main #section4 > div > div:nth-of-type(1) h2{
-        font-size: 1.3em;
-    }
-    #Main #section4 > div > div:nth-of-type(1) span {
-        font-size: 2em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div{
-        width: 90%;
-    }
-    #Main #section6{
-        height: 120vh;
-    }
-    #Main #section6 > div > div:nth-of-type(1) h2{
-        font-size: 1.3em;
-    }
-    .Se6_box h4{
-        font-size: 0.7em;
-    }
-    .Se6_box p{
-        font-size: 0.55em;
-    }
-    #Main #section7 > div > div:nth-of-type(1) h2 {
-        font-size: 1.2em;
-    }
-
-    #Main #section7{
-        height: 160vh;
-    }
-    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(2) h5{
-        font-size: 0.8em;
-    }
-    #Main #section8{
-        height: 120vh;
-    }
-    .Se8_box > div > div:nth-of-type(1) h3{
-        font-size: 0.8em;
-    }
-    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(2) p{
-        font-size: 0.8em;
-    }
-    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(2) span{
-        font-size: 0.65em;
-    }
-    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(1) img{
-        height: 30px;
-        width: 30px;
-    }
-    .Se8_count h3{
-        font-size: 1.5em;
-    }
-    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) h1{
-        font-size: 1.5em;
-    }
-    #Footer > div:nth-of-type(2){
-        height: 100vh;
-    }
-}
-
-@media only screen and (max-width: 750px) and (orientation: landscape) {
-
-
-    #Header > div > div:nth-of-type(2) p,
-    #Header > div > div:nth-of-type(2) button{
-        font-size: 0.7em;
-    }
-
-    #Header > div > div:nth-of-type(2){
-        width: 20%;
-    }
-    
-    #Header > div{
-        width: 90%;
-    }
-    #Header > div > div:nth-of-type(2){
-        width: 20%;
-    }
-    .Menu{
-        width: 75%;
-    }
-    .Menu ul li a{
-        font-size: 0.7em;
-    }
-
-    #Main #section1 > div > div:nth-of-type(1){
-        width: 90%;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h1{
-        font-size: 1.5em;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h2{
-        font-size: 1.2em;
-        margin-top: 2%;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) p{
-        font-size: 0.8em;
-    }
-
-    #Main #section2{
-        height: 120vh;
-    }
-
-    #Main #section2 > div{
-        width: 90%;
-    }
-    #Main #section2 > div > div:nth-of-type(1) h1{
-        font-size: 1.2em;
-    }
-
-    .Se2_box{
-        width: 30%;
-    }
-    .Se2_box h2{
-        font-size: 1.5em;
-    }
-    .Se2_box p{
-        font-size: 1.25em;
-    }
-    #Main #section2 > div > div:nth-of-type(3) button{
-        width: 50%;
-        height: 80%;
-    }
-
-    #Main #section3 > div > div:nth-of-type(1) h2{
-        font-size: 1.2em;
-    }
-
-    #Main #section3{
-        height: 120vh;
-    }
-
-    .Se3_box{
-        width: 24.5%;
-    }
-    .Se3_box .round{
-        width: 45px;
-        height: 45px;
-    }
-    .Se3_box h3{
-        font-size: 0.8em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .Se3_box p{
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    #Main #section4 > div{
-        width: 90%;
-    }
-    #Main #section4 > div > div:nth-of-type(1) span{
-        font-size: 2em;
-    }
-    #Main #section4 > div > div:nth-of-type(1) h2{
-        font-size: 1.2em;
-    }
-    #Main #section4 > div > div:nth-of-type(1) p{
-        font-size: 0.8em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div h4{
-        font-size: 0.8em;
-        width: 32%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div p{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 60%;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div span{
-        height: 100%;
-        width: 8%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #Main #section6{
-        height: 120vh;
-    }
-    #Main #section6 > div > div:nth-of-type(1){
-        height: 40%;
-    }
-    #Main #section6 > div > div:nth-of-type(2){
-        height: 60%;
-    }
-    #Main #section6 > div{
-        width: 90%;
-        height: 90%;
-    }
-    #Main #section6 > div > div:nth-of-type(1) h2{
-        font-size: 1.2em;
-    }
-    .Se6_box h4{
-        white-space: nowrap;
-        overflow: hidden;   
-        text-overflow: ellipsis;
-        width: 100%;
-        margin: 0;
-    }
-    .Se6_box p{
-        white-space: nowrap;
-        overflow: hidden;   
-        text-overflow: ellipsis;
-        width: 100%;
-    }
-
-    .Se6_box a{
-        font-size: 0.7em;
-    }
-
-    #Main #section7 > div{
-        width: 90%;
-    }
-
-    .Se7_box > div > div:nth-of-type(1){
-        width: 75%;
-        justify-content: space-between;
-        
-    }
-    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(2) h5{
-        font-size: 0.8em;
-    }
-    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(1){
-        height: 30%;
-    }
-    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(2){
-        height: 60%;
-    }
-    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(2){
-        height: 10%;
-        display: flex;
-        ;
-    }
-    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(2) a{
-        height: 100%;
-        padding: 0;
-        width: 37%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 165px;
-    }
-    #Main #section8{
-        height: 120vh;
-    }
-    .Se8_box > div > div:nth-of-type(1) h3{
-        font-size: 0.7em;
-    }
-    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(2) p{
-        font-size: 0.7em;
-    }
-    .Se8_box > div > div:nth-of-type(2) > div:nth-of-type(1) img{
-        width: 25px;
-        height: 25px;
-    }
-    .Se8_count h3{
-        font-size: 1.2em;
-    }
-    .Se8_count p{
-        font-size: 0.8em;
-    }
-    #Footer > div:nth-of-type(2){
-        height: 100vh;
-    }
-
-    #Footer > div:nth-of-type(2){
-        height: 110vh;
-    }
-}
-
-
-@media only screen and (max-width: 1400px) and (orientation: portrait) {
-    #Header{
-        height: 100px;
-    }
-    #Header > div{
-        width: 90%;
-        flex-direction: column;
-    }
-    #Header > div > div:nth-of-type(1){
-        width: 100%;
-        height: 50%;
-    }
-    #Header > div > div:nth-of-type(2){
-        width: 100%;
-        height: 50%;
-        display: flex;
-        justify-content: end;
-        button{
-            margin-left: 5%;
+  
+        > div:nth-of-type(1) {
+          width: 70%;
         }
+      }
     }
-    .submenu-content{
-        display: none;
-    }
-
-    .Menu{
-        width: 76%;
-    }
-    .Menu ul li{
-        width: 16%;
-    }
-    .Menu ul li a{
-        font-size: 0.68em;
-    }
-    #Header > div > div:nth-of-type(2) p,
-    #Header > div > div:nth-of-type(2) button{
-        font-size: 0.68em;
-    }
-    #Main #section1{
-        height: 70vh;
-    }
-    #Main #section1 > div > div:nth-of-type(1){
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1){
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 50%;
-        button{
-            font-size: 1em;
-            width: 65%;
-            height: 19%;
-            max-width: 250px;
-            max-height: 52px;
-        }
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(2){
-        width: 100%;
-        height: 50%;
-        img{
-            width: 70%;
-            max-width: 300px;
-        }
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h1{
-        font-size: 2.2em;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-    }
-
-    #Main #section1 > div > div:nth-of-type(2) .se1_bt_wrap{
-        height: 100%;
-    }
-    #Main #section1 > div > div:nth-of-type(2) .rolling{
-        height: 100%;
-    }
-    #Main #section1 > div > div:nth-of-type(2) .rolling img{
-        height: 70%;
-    }
-
-    #Main #section2{
-        height: 120vh;
-    }
-    #Main #section2 > div{
-        width: 90%;
-    }
-    #Main #section2 > div > div:nth-of-type(2){
-        display: flex;
-        flex-direction: column;
-    }
-    .Se2_box{
-        width: 80%;
-        height: 30%;
-        text-align: center !important;
-        h2{
-            width: 100%;
-        }
-        p{
-            width: 100%;
-        }
-        span{
-            width: 100%;
-            font-size: 1.1em;
-        }
-    }
-    #Main #section2 > div > div:nth-of-type(1){
-        height: 25%;
-    }
-    #Main #section2 > div > div:nth-of-type(1) h1{
-        font-size: 1.5em;
-    }
-    #Main #section2 > div > div:nth-of-type(2){
-        height: 65%;
-    }
-    #Main #section2 > div > div:nth-of-type(3){
-        height: 10%;
-    }
-    #Main #section2 > div > div:nth-of-type(3) button{
-        font-size: 1em;
-        width: 65%;
-        height: 70%;
-        max-width: 250px;
-        max-height: 60px;
-    }
-
-    #Main #section3{
-        height: 130vh;
-    }
-
-    #Main #section3 > div{
-        width: 90%;
-        height: 90%;
-    }
-
-    #Main #section3 > div > div:nth-of-type(2) > div:nth-of-type(1){
-        flex-direction: column;
-        height: 90%;
-    }
-    #Main #section3 > div > div:nth-of-type(1){
-        width: 100%;
-        height: 18%;
-    }
-    #Main #section3 > div > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-    }
-    #Main #section3 > div > div:nth-of-type(1) p{
-        font-size: 0.8em;
-    }
-    #Main #section3 > div > div:nth-of-type(2){
-        width: 100%;
-        height: 80%;
-    }
-    
-    .Se3_box{
-        width: 100%;
-        height: 24%;
-        justify-content: space-between;
-        .round{
-            width: 60px;
-            height: 60px;
-            margin-top: 0;
-            background: radial-gradient(circle, rgba(36, 28, 182, 0.35) 0%, rgba(44, 39, 129, 0.35) 50%, rgba(8, 7, 23, 0.35) 100%);
-            span{
+  
+    #Main {
+      #section1 {
+        > div {
+          > div:nth-of-type(1) {
+            width: 80%;
+  
+            > div:nth-of-type(1) {
+              h1 {
                 font-size: 2em;
+              }
+              h2 {
+                font-size: 1.5em;
+                margin-bottom: 3%;
+              }
+              button {
+                width: 37%;
+                height: 12%;
+                max-width: 165px;
+              }
             }
+          }
+  
+          > div:nth-of-type(2) {
+            .se1_bt_wrap {
+              height: 100%;
+            }
+  
+            .rolling {
+              height: 100%;
+              img {
+                height: 100%;
+              }
+            }
+          }
         }
-        h3{
-            margin: 2% 0 1% 0;
+      }
+  
+      #section2 {
+        > div {
+          width: 80%;
+  
+          > div:nth-of-type(1) {
+            h1 {
+              font-size: 1.5em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            justify-content: space-between;
+          }
+  
+          .Se2_box {
+            h2 {
+              font-size: 2em;
+            }
+            span {
+              font-size: 0.75em;
+              margin: 0;
+            }
+            p {
+              margin-top: 0;
+            }
+          }
+  
+          > div:nth-of-type(3) {
+            button {
+              width: 31%;
+              height: 75%;
+              max-width: 230px;
+            }
+          }
         }
-        p{
-            white-space: nowrap;
+      }
+  
+      #section3 {
+        > div {
+          width: 90%;
+          height: 90%;
+  
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.5em;
+            }
+            p {
+              font-size: 0.8em;
+            }
+          }
+  
+          .Se3_box {
+            .round {
+              span {
+                font-size: 1.5em;
+              }
+            }
+            h3 {
+              font-size: 0.9em;
+            }
+            p {
+              font-size: 0.6em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            > div:nth-of-type(2) {
+              align-items: end;
+            }
+          }
         }
+      }
+  
+      #section4 {
+        > div {
+          width: 70%;
+  
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.5em;
+            }
+            p {
+              font-size: 0.8em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            height: 65%;
+  
+            > div {
+              border-radius: 5px;
+  
+              > div:nth-of-type(1) {
+                > div {
+                  flex-direction: row;
+                  justify-content: space-around;
+                  align-items: center;
+  
+                  p {
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      #section6 {
+        > div {
+          width: 80%;
+          height: 80%;
+  
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.5em;
+            }
+            span {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+  
+      #section7 {
+        height: 140vh;
+  
+        > div {
+          width: 80%;
+          height: 90%;
+  
+          > div:nth-of-type(1) {
+            justify-content: center;
+  
+            h2 {
+              font-size: 1.5em;
+              margin: 0;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            > div:nth-of-type(1) {
+              a {
+                height: 32%;
+                width: 32%;
+              }
+            }
+          }
+        }
+      }
+  
+      #section8 {
+        > div {
+          width: 80%;
+        }
+      }
     }
-    
+  
+    #Footer {
+      > div:nth-of-type(1) {
+        height: 100vh;
+  
+        > div > div:nth-of-type(1) {
+          justify-content: space-around;
+  
+          h1 {
+            font-size: 1.8em;
+          }
+        }
+      }
+  
+      > div:nth-of-type(2) {
+        height: 90vh;
+  
+        > div > div:nth-of-type(1) {
+          > div:nth-of-type(1) {
+            width: 15%;
+          }
+          > div:nth-of-type(2) {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
 
-    #Main #section3 > div > div:nth-of-type(2) > div:nth-of-type(2){
-        height: 10%;
+  @media only screen and (max-width: 900px) and (orientation: landscape) {
+    .Menu ul li a,
+    #Header > div > div:nth-of-type(2) {
+      button,
+      p {
+        font-size: 0.7em;
+      }
     }
-
-    #Main #section4 > div{
-        width: 90%;
-    }
-
-    #Main #section4 > div > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-    }
-    #Main #section4 > div > div:nth-of-type(1) p{
-        font-size: 0.8em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div h4{
-        margin: 2% 0;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div p {
-        width: auto;
-        font-size: 0.72em;
-        height: auto;
-    }
-    #Main #section5{
-        height: 80vh;
-    }
-
-    #Main #section6{
+  
+    #Main {
+      #section2 {
         height: 120vh;
-        & > div > div:nth-of-type(1){
+  
+        > div {
+          > div:nth-of-type(1) {
+            h1 {
+              font-size: 1.3em;
+            }
+          }
+        }
+  
+        .Se2_box {
+          width: 26%;
+          h2 {
+            font-size: 1.5em;
+          }
+          p {
+            font-size: 1.5em;
+          }
+        }
+      }
+  
+      #section3 {
+        height: 120vh;
+  
+        > div {
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.3em;
+            }
+          }
+        }
+  
+        .Se3_box {
+          width: 23.5%;
+  
+          h3 {
+            font-size: 0.75em;
+          }
+          p {
+            font-size: 0.6em;
+            zoom: 0.9;
+          }
+        }
+      }
+  
+      #section4 {
+        > div {
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.3em;
+            }
+            span {
+              font-size: 2em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            > div {
+              > div:nth-of-type(1) {
+                > div {
+                  p {
+                    font-size: 0.65em;
+                  }
+                  h4 {
+                    font-size: 0.8em;
+                  }
+                  width: 90%;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      #section6 {
+        height: 120vh;
+  
+        > div {
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.3em;
+            }
+          }
+  
+          .Se6_box {
+            h4 {
+              font-size: 0.7em;
+            }
+            p {
+              font-size: 0.55em;
+            }
+          }
+        }
+      }
+  
+      #section7 {
+        height: 160vh;
+  
+        > div {
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.2em;
+            }
+          }
+        }
+  
+        .Se7_box {
+          > div {
+            > div:nth-of-type(1) {
+              > div:nth-of-type(2) {
+                h5 {
+                  font-size: 0.8em;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      #section8 {
+        height: 120vh;
+  
+        > div {
+          > div:nth-of-type(1) {
+            h3 {
+              font-size: 0.8em;
+            }
+          }
+          > div:nth-of-type(2) {
+            > div:nth-of-type(1) {
+              img {
+                height: 30px;
+                width: 30px;
+              }
+            }
+            > div:nth-of-type(2) {
+              p {
+                font-size: 0.8em;
+              }
+              span {
+                font-size: 0.65em;
+              }
+            }
+          }
+        }
+      }
+  
+      .Se8_count {
+        h3 {
+          font-size: 1.5em;
+        }
+      }
+    }
+  
+    #Footer {
+      > div:nth-of-type(1) {
+        > div {
+          > div:nth-of-type(1) {
+            h1 {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+  
+      > div:nth-of-type(2) {
+        height: 100vh;
+      }
+    }
+  }
+  
+
+  @media only screen and (max-width: 750px) and (orientation: landscape) {
+    #Header {
+      > div {
+        width: 90%;
+  
+        > div:nth-of-type(2) {
+          width: 20%;
+          p,
+          button {
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+  
+    .Menu {
+      width: 75%;
+  
+      ul li a {
+        font-size: 0.7em;
+      }
+    }
+  
+    #Main {
+      #section1 {
+        > div {
+          > div:nth-of-type(1) {
+            width: 90%;
+  
+            > div:nth-of-type(1) {
+              h1 {
+                font-size: 1.5em;
+              }
+              h2 {
+                font-size: 1.2em;
+                margin-top: 2%;
+              }
+              p {
+                font-size: 0.8em;
+              }
+            }
+          }
+        }
+      }
+  
+      #section2 {
+        height: 120vh;
+  
+        > div {
+          width: 90%;
+  
+          > div:nth-of-type(1) {
+            h1 {
+              font-size: 1.2em;
+            }
+          }
+  
+          .Se2_box {
+            width: 30%;
+  
+            h2 {
+              font-size: 1.5em;
+            }
+            p {
+              font-size: 1.25em;
+            }
+          }
+  
+          > div:nth-of-type(3) {
+            button {
+              width: 50%;
+              height: 80%;
+            }
+          }
+        }
+      }
+  
+      #section3 {
+        height: 120vh;
+  
+        > div {
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.2em;
+            }
+          }
+  
+          .Se3_box {
+            width: 24.5%;
+  
+            .round {
+              width: 45px;
+              height: 45px;
+            }
+            h3 {
+              font-size: 0.8em;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            p {
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+  
+      #section4 {
+        > div {
+          width: 90%;
+  
+          > div:nth-of-type(1) {
+            span {
+              font-size: 2em;
+            }
+            h2 {
+              font-size: 1.2em;
+            }
+            p {
+              font-size: 0.8em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            > div {
+              > div:nth-of-type(1) {
+                > div {
+                  h4 {
+                    font-size: 0.8em;
+                    width: 32%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+                  p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 60%;
+                  }
+                  span {
+                    height: 100%;
+                    width: 8%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      #section6 {
+        height: 120vh;
+  
+        > div {
+          width: 90%;
+          height: 90%;
+  
+          > div:nth-of-type(1) {
+            height: 40%;
+  
+            h2 {
+              font-size: 1.2em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            height: 60%;
+          }
+  
+          .Se6_box {
+            h4 {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+              margin: 0;
+            }
+            p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+            }
+            a {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+  
+      #section7 {
+        > div {
+          width: 90%;
+  
+          .Se7_box {
+            > div {
+              > div:nth-of-type(1) {
+                width: 75%;
+                justify-content: space-between;
+  
+                > div:nth-of-type(1) {
+                  height: 30%;
+                }
+                > div:nth-of-type(2) {
+                  h5 {
+                    font-size: 0.8em;
+                  }
+                  height: 60%;
+                }
+              }
+  
+              > div:nth-of-type(2) {
+                height: 10%;
+                display: flex;
+  
+                a {
+                  height: 100%;
+                  padding: 0;
+                  width: 37%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  max-width: 165px;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      #section8 {
+        height: 120vh;
+  
+        .Se8_box {
+          > div {
+            > div:nth-of-type(1) {
+              h3 {
+                font-size: 0.7em;
+              }
+            }
+            > div:nth-of-type(2) {
+              > div:nth-of-type(1) {
+                img {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+              > div:nth-of-type(2) {
+                p {
+                  font-size: 0.7em;
+                }
+              }
+            }
+          }
+  
+          .Se8_count {
+            h3 {
+              font-size: 1.2em;
+            }
+            p {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  
+    #Footer {
+      > div:nth-of-type(2) {
+        height: 110vh;
+      }
+    }
+  }
+  
+
+
+  @media only screen and (max-width: 1400px) and (orientation: portrait) {
+    #Header {
+      height: 100px;
+  
+      > div {
+        width: 90%;
+        flex-direction: column;
+  
+        > div:nth-of-type(1) {
+          width: 100%;
+          height: 50%;
+        }
+  
+        > div:nth-of-type(2) {
+          width: 100%;
+          height: 50%;
+          display: flex;
+          justify-content: end;
+  
+          button {
+            margin-left: 5%;
+          }
+        }
+  
+        > div > div:nth-of-type(2) {
+          p,
+          button {
+            font-size: 0.68em;
+          }
+        }
+      }
+    }
+  
+    .submenu-content {
+      display: none;
+    }
+  
+    .Menu {
+      width: 76%;
+  
+      ul {
+        li {
+          width: 16%;
+  
+          a {
+            font-size: 0.68em;
+          }
+        }
+      }
+    }
+  
+    #Main {
+      #section1 {
+        height: 70vh;
+  
+        > div > div:nth-of-type(1) {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+  
+          > div:nth-of-type(1) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 50%;
+  
+            h1 {
+              font-size: 2.2em;
+            }
+            h2 {
+              font-size: 1.5em;
+            }
+            button {
+              font-size: 1em;
+              width: 65%;
+              height: 19%;
+              max-width: 250px;
+              max-height: 52px;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            width: 100%;
+            height: 50%;
+  
+            img {
+              width: 70%;
+              max-width: 300px;
+            }
+          }
+        }
+  
+        > div > div:nth-of-type(2) {
+          .se1_bt_wrap {
+            height: 100%;
+          }
+  
+          .rolling {
+            height: 100%;
+  
+            img {
+              height: 70%;
+            }
+          }
+        }
+      }
+  
+      #section2 {
+        height: 120vh;
+  
+        > div {
+          width: 90%;
+  
+          > div:nth-of-type(1) {
+            height: 25%;
+  
+            h1 {
+              font-size: 1.5em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            display: flex;
+            flex-direction: column;
+            height: 65%;
+          }
+  
+          > div:nth-of-type(3) {
+            height: 10%;
+  
+            button {
+              font-size: 1em;
+              width: 65%;
+              height: 70%;
+              max-width: 250px;
+              max-height: 60px;
+            }
+          }
+  
+          .Se2_box {
+            width: 80%;
+            height: 30%;
+            text-align: center !important;
+  
+            h2,
+            p,
+            span {
+              width: 100%;
+            }
+  
+            span {
+              font-size: 1.1em;
+            }
+          }
+        }
+      }
+  
+      #section3 {
+        height: 130vh;
+  
+        > div {
+          width: 90%;
+          height: 90%;
+  
+          > div:nth-of-type(1) {
+            width: 100%;
+            height: 18%;
+  
+            h2 {
+              font-size: 1.5em;
+            }
+            p {
+              font-size: 0.8em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            width: 100%;
+            height: 80%;
+  
+            > div:nth-of-type(1) {
+              flex-direction: column;
+              height: 90%;
+            }
+  
+            > div:nth-of-type(2) {
+              height: 10%;
+            }
+          }
+  
+          .Se3_box {
+            width: 100%;
+            height: 24%;
+            justify-content: space-between;
+  
+            .round {
+              width: 60px;
+              height: 60px;
+              margin-top: 0;
+              background: radial-gradient(circle, rgba(36, 28, 182, 0.35) 0%, rgba(44, 39, 129, 0.35) 50%, rgba(8, 7, 23, 0.35) 100%);
+  
+              span {
+                font-size: 2em;
+              }
+            }
+  
+            h3 {
+              margin: 2% 0 1% 0;
+            }
+  
+            p {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+  
+      #section4 {
+        > div {
+          width: 90%;
+  
+          > div:nth-of-type(1) {
+            h2 {
+              font-size: 1.5em;
+            }
+            p {
+              font-size: 0.8em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            > div > div:nth-of-type(1) > div {
+              h4 {
+                margin: 2% 0;
+              }
+              p {
+                width: auto;
+                font-size: 0.72em;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+  
+      #section5 {
+        height: 80vh;
+      }
+  
+      #section6 {
+        height: 120vh;
+  
+        > div {
+          width: 80%;
+          height: 80%;
+  
+          > div:nth-of-type(1) {
             height: 35%;
             text-align: center;
-        }
-        & > div > div:nth-of-type(2){
+  
+            h2 {
+              font-size: 1.5em;
+            }
+            span {
+              font-size: 0.8em;
+            }
+          }
+  
+          > div:nth-of-type(2) {
             height: 65%;
+            flex-direction: column;
+          }
+  
+          .Se6_box {
+            width: 100%;
+            height: 33%;
+            align-items: center;
+  
+            p {
+              text-align: center;
+            }
+          }
         }
-    }
-
-    #Main #section6 > div > div:nth-of-type(1) h2{
-        font-size: 1.5em;
-    }
-    #Main #section6 > div > div:nth-of-type(1) span{
-        font-size: 0.8em;
-    }
-    
-
-    #Main #section6 > div{
-        width: 80%;
-        height: 80%;
-    }
-    #Main #section6 > div > div:nth-of-type(2){
-        flex-direction: column;
-    }
-    .Se6_box{
-        width: 100%;
-        height: 33%;
-        align-items: center;
-        p{
-            text-align: center;
-        }
-    }
-
-    #Main #section7{
+      }
+  
+      #section7 {
         height: 200vh;
-    }
-    #Main #section7 > div{
-        width: 80%;
-        height: 90%;
-    }
-    #Main #section7 > div > div:nth-of-type(1){
-        height: 8%;
-        align-items: center;
-        h2{
-            text-align: center;
+  
+        > div {
+          width: 80%;
+          height: 90%;
+  
+          > div:nth-of-type(1) {
+            height: 8%;
+            align-items: center;
+  
+            h2 {
+              text-align: center;
+            }
+          }
+  
+          > div:nth-of-type(2) {
+            height: 92%;
+  
+            > div:nth-of-type(1) {
+              flex-direction: column;
+              flex-wrap: nowrap;
+              height: 93%;
+              row-gap: 0%;
+  
+              a {
+                width: 100%;
+                height: 10%;
+              }
+            }
+  
+            > div:nth-of-type(2) {
+              height: 5%;
+  
+              a {
+                font-size: 1em;
+                width: 100%;
+                height: 70%;
+                max-width: 344px;
+                max-height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+  
+          .Se7_box {
+            > div > div:nth-of-type(1) {
+              > div:nth-of-type(1) {
+                height: 40%;
+              }
+              > div:nth-of-type(2) {
+                height: 60%;
+              }
+            }
+  
+            > div > div:nth-of-type(2) {
+              > div:nth-of-type(1) {
+                height: 40%;
+              }
+              > div:nth-of-type(2) {
+                height: 60%;
+                align-items: center;
+              }
+  
+              h5 {
+                font-size: 1.1em;
+              }
+            }
+          }
         }
-    }
-    #Main #section7 > div > div:nth-of-type(2){
-        height: 92%;
-    }
-    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(1){
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: 93%;
-        row-gap: 0%;
-    }
-    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(1) a{
-        width: 100%;
-        height: 10%;
-    }
-    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(2){
-        height: 5%;
-    }
-    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(2) h5{
-        font-size: 1.1em;
-    }
-
-    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(1){
-        height: 40%;
-    }
-    .Se7_box > div > div:nth-of-type(1) > div:nth-of-type(2){
-        height: 60%;
-    }
-    .Se7_box > div > div:nth-of-type(2) > div:nth-of-type(1){
-        height: 40%;
-    }
-    .Se7_box > div > div:nth-of-type(2) > div:nth-of-type(2){
-        height: 60%;
-        align-items: center;
-    }
-
-    #Main #section7 > div > div:nth-of-type(2) > div:nth-of-type(2) a{
-        font-size: 1em;
-        width: 100%;
-        height: 70%;
-        max-width: 344px;
-        max-height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #Main #section8{
+      }
+  
+      #section8 {
         height: 160vh;
-    }
-    #Main #section8 > div{
-        width: 90%;
-        height: 90%;
-    }
-    #Main #section8 > div > div:nth-of-type(1){
-        height: 40%;
-    }
-    #Main #section8 > div > div:nth-of-type(2){
-        height: 60%;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .Se8_box{
-        width: 80%;
-    }
-    .Se8_box > div > div:nth-of-type(1) h3{
-        font-size: 1em;
-    }
-
-    .Se8_count{
-        width: 100%;
-        height: 20%;
-        h3{
-            font-size: 2.5em;
+  
+        > div {
+          width: 90%;
+          height: 90%;
+  
+          > div:nth-of-type(1) {
+            height: 40%;
+          }
+  
+          > div:nth-of-type(2) {
+            height: 60%;
+            flex-direction: column;
+            justify-content: space-evenly;
+          }
+  
+          .Se8_box {
+            width: 80%;
+  
+            > div > div:nth-of-type(1) {
+              h3 {
+                font-size: 1em;
+              }
+            }
+          }
+  
+          .Se8_count {
+            width: 100%;
+            height: 20%;
+  
+            h3 {
+              font-size: 2.5em;
+            }
+            p {
+              font-size: 1.3em;
+            }
+          }
         }
-        p{
-            font-size: 1.3em;
-        }
+      }
     }
-
-    #Footer > div:nth-of-type(1){
+  
+    #Footer {
+      > div:nth-of-type(1) {
         height: 40vh;
-        & > div > div:nth-of-type(2) img{
-            height: auto;
+  
+        > div > div {
+          height: 50% !important;
+  
+          > div:nth-of-type(2) {
+            img {
+              height: auto;
+            }
+          }
+  
+          > div:nth-of-type(1) {
+            a {
+              padding: 3% 6%;
+            }
+          }
         }
-    }
-    #Footer > div:nth-of-type(1) > div > div{
-        height: 50% !important;
-    }
-    #Footer > div:nth-of-type(1) > div > div:nth-of-type(1) a{
-        padding: 3% 6%;
-    }
-
-    #Footer > div:nth-of-type(2){
+      }
+  
+      > div:nth-of-type(2) {
         height: 100vh;
-    }
-    #Footer > div:nth-of-type(2) > div{
-        width: 90%;
-    }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1){
-        flex-direction: column;
-    }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1){
-        width: 100%;
-        height: 10%;
-    }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2){
-        width: 100%;
-        height: 85%;
-    }
-    .footer-section{
-        flex-wrap: wrap;
-    }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) .footer-column{
-        width: 45%;
-        flex: none;
-    }
-    
-    #Footer > div:nth-of-type(2) {
+  
+        > div {
+          width: 90%;
+  
+          > div:nth-of-type(1) {
+            flex-direction: column;
+  
+            > div:nth-of-type(1) {
+              width: 100%;
+              height: 10%;
+            }
+  
+            > div:nth-of-type(2) {
+              width: 100%;
+              height: 85%;
+            }
+  
+            .footer-column {
+              width: 45%;
+              flex: none;
+            }
+          }
+        }
+      }
+  
+      > div:nth-of-type(2) {
         height: 80vh;
+      }
     }
-   
-}
+  }
+  
 
-@media only screen and (max-width: 400px) and (orientation: portrait) {
-    #Main #section1 {
+  @media only screen and (max-width: 400px) and (orientation: portrait) {
+    #Main {
+      #section1 {
         height: 85vh;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h1 {
-        font-size: 1.7em;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) h2 {
-        font-size: 1.3em;
-    }
-    #Main #section1 > div > div:nth-of-type(1) > div:nth-of-type(1) p {
-        font-size: 0.8em;
-    }
-    #Main #section2 > div > div:nth-of-type(1) h1 {
-        font-size: 1.3em;
-    }
-
-    #Main #section2 > div{
-        height: 90%;
-    }
-
-    .Se2_box h2{
-        font-size: 2em;
-    }
-    .Se2_box p {
-        font-size: 1.2em;
-    }
-    .Se2_box span {
-        width: 100%;
-        font-size: 0.9em;
-    }
-
-    #Main #section2 > div > div:nth-of-type(3) button {
-        font-size: 0.8em;
-    }
-    #Main #section3 {
+  
+        > div > div:nth-of-type(1) > div:nth-of-type(1) {
+          h1 {
+            font-size: 1.7em;
+          }
+          h2 {
+            font-size: 1.3em;
+          }
+          p {
+            font-size: 0.8em;
+          }
+        }
+      }
+  
+      #section2 {
+        > div {
+          height: 90%;
+  
+          > div:nth-of-type(1) {
+            h1 {
+              font-size: 1.3em;
+            }
+          }
+  
+          > div:nth-of-type(3) {
+            button {
+              font-size: 0.8em;
+            }
+          }
+        }
+  
+        .Se2_box {
+          h2 {
+            font-size: 2em;
+          }
+          p {
+            font-size: 1.2em;
+          }
+          span {
+            width: 100%;
+            font-size: 0.9em;
+          }
+        }
+      }
+  
+      #section3 {
         height: 170vh;
-    }
-    #Main #section3 > div > div:nth-of-type(1) h2 {
-        font-size: 1.3em;
-    }
-
-    #Main #section4 > div > div:nth-of-type(1) h2 {
-        font-size: 1.3em;
-    }
-    #Main #section4 > div > div:nth-of-type(1) p {
-        font-size: 0.7em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div h4{
-        font-size: 0.8em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div p{
-        font-size: 0.6em;
-    }
-    #Main #section4 > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div{
-        width: 85%;
-    }
-    #Main #section4 > div > div:nth-of-type(1) span{
-        font-size: 2em;
-    }
-
-    #Main #section5{
+  
+        > div > div:nth-of-type(1) {
+          h2 {
+            font-size: 1.3em;
+          }
+        }
+      }
+  
+      #section4 {
+        > div > div:nth-of-type(1) {
+          h2 {
+            font-size: 1.3em;
+          }
+          p {
+            font-size: 0.7em;
+          }
+          span {
+            font-size: 2em;
+          }
+        }
+  
+        > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div {
+          width: 85%;
+  
+          h4 {
+            font-size: 0.8em;
+          }
+          p {
+            font-size: 0.6em;
+          }
+        }
+      }
+  
+      #section5 {
         height: 100vh;
-    }
-
-    #Main #section6 > div > div:nth-of-type(1) p {
-        color: #cfcfcf;
-        font-family: "AppleNeoUL";
-        font-size: 0.9em;
-    }
-    #Main #section6 > div > div:nth-of-type(1) h2{
-        font-size: 1em;
-    }
-    #Main #section6 > div > div:nth-of-type(1) span{
-        font-size: 0.7em;
-    }
-
-    .Se6_box:nth-of-type(1) > span{
-        margin:  2% 0;
-    }
-    .Se6_box p{
-        margin: 2% 0;
-    }
-    .Se6_box > img{
-        margin:  2% 0;
-    }
-
-    .Se6_box:nth-of-type(3) h4 {
-        margin: 6% 0 2% 0;
-    }
-
-    .Se8_count h3 {
-        font-size: 2em;
-    }
-
-    .Se8_count p {
-        font-size: 1.1em;
-    }
-
-    #Main #section7{
+      }
+  
+      #section6 {
+        > div > div:nth-of-type(1) {
+          p {
+            color: #cfcfcf;
+            font-family: "AppleNeoUL";
+            font-size: 0.9em;
+          }
+          h2 {
+            font-size: 1em;
+          }
+          span {
+            font-size: 0.7em;
+          }
+        }
+  
+        .Se6_box {
+          &:nth-of-type(1) > span {
+            margin: 2% 0;
+          }
+  
+          p {
+            margin: 2% 0;
+          }
+  
+          > img {
+            margin: 2% 0;
+          }
+  
+          &:nth-of-type(3) h4 {
+            margin: 6% 0 2% 0;
+          }
+        }
+      }
+  
+      #section7 {
         height: 220vh;
+  
+        > div > div:nth-of-type(1) {
+          h2 {
+            font-size: 1.3em;
+          }
+          p {
+            font-size: 0.9em;
+          }
+        }
+      }
+  
+      #section8 .Se8_count {
+        h3 {
+          font-size: 2em;
+        }
+        p {
+          font-size: 1.1em;
+        }
+      }
     }
-
-    #Main #section7 > div > div:nth-of-type(1) h2 {
-        font-size: 1.3em;
-    }
-
-    #Main #section7 > div > div:nth-of-type(1) p{
-        font-size: 0.9em;
-    }
-
-    #Footer > div:nth-of-type(1) {
+  
+    #Footer {
+      > div:nth-of-type(1) {
         height: 55vh;
-    }
-    #Footer > div:nth-of-type(2) {
+      }
+  
+      > div:nth-of-type(2) {
         height: 110vh;
+  
+        > div > div:nth-of-type(2) {
+          width: 100%;
+          height: 25%;
+          display: flex;
+          flex-direction: column;
+  
+          > div:nth-of-type(1),
+          > div:nth-of-type(2) {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
     }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(2) {
-        width: 100%;
-        height: 25%;
-        display: flex;
-        flex-direction: column;
-    }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1){
-        width: 100%;
-        height: 50%;
-        display: flex;
-        align-items: center;
-    }
-    #Footer > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2){
-        width: 100%;
-        height: 50%;
-        display: flex;
-        align-items: center;
-    }
-}
+  }
+  
