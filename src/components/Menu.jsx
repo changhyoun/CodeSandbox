@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileCode, faMessage } from '@fortawesome/free-regular-svg-icons';
-import SubMenuItem from './SubMenuItem'; // SubMenuItem 컴포넌트 임포트
+import SubMenuItem from './SubMenuItem';
 import { faBookOpenReader, faBoxesPacking, faSwatchbook, faUserGraduate, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { faFileCircleCheck } from '@fortawesome/free-solid-svg-icons/faFileCircleCheck';
 

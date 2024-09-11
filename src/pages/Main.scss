@@ -33,7 +33,7 @@ $text-color1 : #1D1D1D;
           justify-content: center;
           h1{
             font-size: 5em;
-            color: transparent; /* 텍스트가 채워지지 않도록 설정 */
+            color: transparent; 
             -webkit-text-stroke: 1px #7fa1c3; /* 초기 아웃라인 색상 설정 */
             position: relative;
             overflow: hidden;
@@ -52,9 +52,9 @@ $text-color1 : #1D1D1D;
             margin-bottom: 7%;
             .char1 {
               display: inline-block;
-              opacity: 1; /* 초기 상태에서 텍스트 아웃라인이 보이도록 설정 */
-              -webkit-text-stroke: 0.5px #D6EFD8; /* 개별 문자 아웃라인 색상 */
-              color: transparent; /* 초기 상태에서 텍스트는 투명하게 */
+              opacity: 1;
+              -webkit-text-stroke: 0.5px #D6EFD8;
+              color: transparent;
             }
           }
           
@@ -553,17 +553,13 @@ $text-color1 : #1D1D1D;
           
         }
   
-        /* 왼쪽으로 무한 회전 애니메이션 */
         .section8_t_t {
           animation: slide-left 50s linear infinite;
-          /* 호버 시 애니메이션 정지 */
           animation-play-state: running;
         }
           
-        /* 오른쪽으로 무한 회전 애니메이션 */
         .section8_t_bt {
           animation: slide-right 50s linear infinite;
-          /* 호버 시 애니메이션 정지 */
           animation-play-state: running;
         }
       }
@@ -581,8 +577,6 @@ $text-color1 : #1D1D1D;
       }
     }
   }
-  
-  /* 애니메이션 정의 */
   @keyframes slide-left {
     0% {
       transform: translateX(0);

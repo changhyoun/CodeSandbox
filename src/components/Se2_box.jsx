@@ -4,8 +4,8 @@ import { gsap } from 'gsap';
 
 const Se2_box = ({ se2_h2_tx, se2_p_tx, se2_span_tx, shouldAnimate }) => {
   const [displayText, setDisplayText] = useState("00"); // 초기 텍스트 상태를 '00'으로 설정
-  const pRef = useRef(null); // p 요소 참조
-  const spanRef = useRef(null); // span 요소 참조
+  const pRef = useRef(null);
+  const spanRef = useRef(null);
 
   useEffect(() => {
     // 화면 크기에 따라 shouldAnimate가 true로 설정되도록 수정
@@ -35,7 +35,7 @@ const Se2_box = ({ se2_h2_tx, se2_p_tx, se2_span_tx, shouldAnimate }) => {
       const targetNumber = numberMatch[0]; // 애니메이션의 목표 숫자
       const numDigits = targetNumber.length;
 
-      const tl = gsap.timeline(); // 타임라인 생성
+      const tl = gsap.timeline();
 
       if (numDigits === 1) {
         // 한 자리 수 애니메이션

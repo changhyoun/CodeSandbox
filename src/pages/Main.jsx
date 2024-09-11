@@ -39,13 +39,8 @@ const Main = () => {
     window.open('https://codesandbox.io/cloud-development-environments', '_blank');
   };
 
-  const goLogin = () => {
-    window.location.href = 'https://codesandbox.io/signin?utm_source=landingpage';
-  };
 
-  useEffect(() => {
-    // 기존 애니메이션 설정
-    
+  useEffect(() => {  
     const h1Chars1 = h1Ref1.current.innerText.split("").map((char1) =>
       `<span class="char1">${char1}</span>`
     ).join("");
@@ -100,7 +95,6 @@ const Main = () => {
     const images = gsap.utils.toArray(rolRef.current.children);
     const totalWidth = images.length * images[0].offsetWidth;
 
-     // 애니메이션을 제어할 수 있도록 변수에 저장
      const rollingAnimation = gsap.to(images, {
       x: `-=${totalWidth}`,
       ease: 'none',
@@ -111,19 +105,15 @@ const Main = () => {
       }
     });
 
-    // 호버 이벤트 리스너 추가
     rolRef.current.addEventListener('mouseenter', () => rollingAnimation.pause());
     rolRef.current.addEventListener('mouseleave', () => rollingAnimation.resume());
 
-    // h2를 특수 문자로 초기화
     const originalText = "전체 팀을 위한 하나의 환경,";
     const scrambledText = originalText.split('').map(() =>
       String.fromCharCode(Math.floor(Math.random() * (126 - 33) + 33))
     ).join('');
     section3h2Ref.current.innerText = scrambledText;
 
-    console.log('h2Ref1',h2Ref1.current)
-    // Intersection Observer 설정
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -223,12 +213,10 @@ const Main = () => {
 
   
     const handleScroll = () => {
-      const section4Top = section4Ref.current.offsetTop; // 섹션4의 시작 위치
-      const section4Height = section4Ref.current.offsetHeight; // 섹션4의 높이
-      const section5Top = document.getElementById('section5').offsetTop; // 섹션5의 시작 위치
-      const section5Height = document.getElementById('section5').offsetHeight; // 섹션5의 높이
-      const scrollY = window.scrollY; // 현재 스크롤 위치
-      const section3Bottom = document.getElementById('section3').offsetTop + document.getElementById('section3').offsetHeight; // 섹션3의 끝 위치
+      const section4Height = section4Ref.current.offsetHeight;
+      const section5Top = document.getElementById('section5').offsetTop;
+      const scrollY = window.scrollY;
+      const section3Bottom = document.getElementById('section3').offsetTop + document.getElementById('section3').offsetHeight;
         
       // 섹션4를 고정시키는 로직
       if (scrollY >= section3Bottom && scrollY < section5Top) {
@@ -238,8 +226,7 @@ const Main = () => {
         section4Ref.current.style.position = 'relative';
       }
     
-      // 섹션 5의 시작 위치부터 높이까지의 스크롤 기준으로 애니메이션 설정
-      const relativeScroll = scrollY - section3Bottom; // section4의 중간부터 스크롤 위치를 계산
+      const relativeScroll = scrollY - section3Bottom;
       const relativeProgress = relativeScroll / section4Height; // 스크롤 진행 비율 (0 ~ 1)
     
       // 애니메이션 초기화
@@ -384,7 +371,6 @@ const Main = () => {
             </div>
             <div className="section3_bt">
             <div className="section3_bt_t">
-                {/* Se3_box 컴포넌트들을 각각의 ref에 추가 */}
                 <Se3_box 
                   ref={el => se3BoxRefs.current[0] = el}
                   se3_span_tx={'Cloud'} 
@@ -596,8 +582,6 @@ const Main = () => {
               <Se8_box se8_h3_tx={<>팀원들과의 협업이 훨씬 쉬워졌어요.<br/>실시간으로 코드를 공유하고 수정할 수 있어서 회의나 피드백이 훨씬 더 효율적이에요.</>} se8_img={'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'홍길동'} se8_span_tx={'프론트엔드 개발자'}  />
               <Se8_box se8_h3_tx={<>아이디어를 빠르게 시각화하고 테스트할 수 있어요.<br/>새로운 프로젝트의 프로토타입을 만드는 데 CodeSandbox만큼 빠르고 쉬운 도구는 없을 거예요.</>} se8_img={'https://images.unsplash.com/photo-1706373193792-52fc0b8b22e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김미루'} se8_span_tx={'퍼블리셔'}  />
               <Se8_box se8_h3_tx={<>설치 없이 브라우저에서 바로 작업할 수 있어서 언제 어디서나 코딩할 수 있어요.<br/>출퇴근길에도 코드를 손볼 수 있어서 너무 좋아요!</>} se8_img={'https://images.unsplash.com/photo-1577880216142-8549e9488dad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'한동근'} se8_span_tx={'백엔드 개발자'}  />
-              
-              {/* 동일한 박스가 반복됩니다 */}
             </div>
             <div className="section8_t_bt"> {/* 오른쪽으로 회전할 박스들 */}
               <Se8_box se8_h3_tx={<>여러 프레임워크와 라이브러리 템플릿을 지원해서<br/>새 프로젝트를 시작할 때 많은 시간을 절약할 수 있었어요.</>} se8_img={'https://images.unsplash.com/photo-1539614474468-f423a2d2270c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'한수희'} se8_span_tx={'풀스텍 개발자'}  />
@@ -608,9 +592,6 @@ const Main = () => {
               <Se8_box se8_h3_tx={<>코드를 작성하는 즉시 자동으로 저장돼서 실수로 저장하지 못해도 걱정할 필요가 없어요.<br/>덕분에 프로젝트의 진행 속도가 빨라졌어요</>} se8_img={'https://images.unsplash.com/photo-1545996124-0501ebae84d0?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'이철희'} se8_span_tx={'블록체인 개발자'}  />
               <Se8_box se8_h3_tx={<>VS Code와 비슷한 확장 기능들을 사용할 수 있어서 익숙한 개발 환경처럼 느껴져요.<br/>플러그인 덕분에 생산성이 더 높아졌어요.</>} se8_img={'https://images.unsplash.com/photo-1593529467220-9d721ceb9a78?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김나희'} se8_span_tx={'프론트엔드 개발자'}  />
               <Se8_box se8_h3_tx={<>CodeSandbox는 무료로 클라우드 서버를 제공해서<br/>개발과 테스트를 할 수 있어요.</>} se8_img={'https://images.unsplash.com/photo-1695927621677-ec96e048dce2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} se8_p_tx={'김재덕'} se8_span_tx={'백엔드 개발자'}  />
-          
-                      
-              {/* 동일한 박스가 반복됩니다 */}
             </div>
           </div>
           <div className="section8_bt">

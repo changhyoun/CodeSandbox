@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Se7_box.scss";
-import { Link } from 'react-router-dom';
 
 const Se7_box = ({se7_ic,se7_h5_tx,se7_p_tx,se7_small}) => {
   return (

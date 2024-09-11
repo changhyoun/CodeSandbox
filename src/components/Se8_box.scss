@@ -1,11 +1,11 @@
 .Se8_box{
   width: 40%;
   height: 100%;
-  background: '#f0f0f0'; // 사용자 정의 배경색
+  background: '#f0f0f0';
   border-radius: 15px;
   transition: all 0.2s ease;
-  flex-shrink: 0; /* 요소가 줄어들지 않도록 설정 */
-  flex-basis: 40%; /* 요소의 기본 크기를 설정 */
+  flex-shrink: 0;
+  flex-basis: 40%;
   display: flex;
   background: linear-gradient(135deg, #80AF81, #A1C78C, #C9E7A8);
   box-shadow: 0 0 15px #80AF81;
